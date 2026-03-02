@@ -779,14 +779,14 @@ Note that the LED monitor-generated calibration image is not ideal since the LED
 
 **Dot grid pattern generator** 
 
-![ezgif-185b9182663f33fe.gif](ezgif-185b9182663f33fe.gif)
+![ezgif-185b9182663f33fe.gif](images/ezgif-185b9182663f33fe.gif)
 
 **Line grating target**
 
 [Line_periodic.html](Line_periodic.html)
 
-![image.png](image-124.png)
+![image.png](images/image-124.png)
 
 **Noise filter tuner**
 
-![ezgif-1a261b57bfa2beda.gif](ezgif-1a261b57bfa2beda.gif)
+![ezgif-1a261b57bfa2beda.gif](images/ezgif-1a261b57bfa2beda.gif)
