@@ -11,8 +11,9 @@ Updated on Jan. 20, 2025, Taehwang Son
 
 ## Camera spec
 
-<img src="./images/image.png" height="300" style="display: block; margin: 0 auto;" />
+![Camera used in the test](images/image.png)
 Camera used in the test
+
 
 Sensor: [JAI GO-2400C-USB](https://www.jai.com/products/go-2400c-usb) Sony IMX174,  2.3 megapixels (1920x1200), pixel 5.86μm
 Lens: [LM6HC](https://www.kowa-lenses.com/LM6HC-1-6mm-5MP-C-Mount-Lens/10904?srsltid=AfmBOor15VPXkPNz9Smi4Cd0WQA2JmWWfSadqVhDm4c0PdeqIAd5KcbP) ( 1" f= 6mm 5MP C-Mount Lens ) F/1.8 
