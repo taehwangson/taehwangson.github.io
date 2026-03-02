@@ -11,6 +11,8 @@ nav_order: 6
 
 by Taehwang Son
 
+
+
 ## 1. Goal
 
 - Accurately compute **CIE 1931 XYZ tristimulus values** from a monitor’s display using spectral measurements and the **CIE 1931 2° standard observer** color matching functions.
@@ -227,3 +229,15 @@ Where:
 [3] "Color Appearance Models," Third Edition, by Mark D. Fairchild.
 
 [4] https://www.imatest.com/docs/colortone_ref/
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script> d
