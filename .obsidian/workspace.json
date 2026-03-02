@@ -184,5 +184,11 @@
     }
   },
   "active": "aaefd1bfba2a995a",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "assets/js/mathjax-script-type.js",
+    "assets/js/mathtex-script-type.js",
+    "_layouts/mathjax.html",
+    "_includes/mathjax.html",
+    "docs/display-performance-measurement/index.md"
+  ]
 }
