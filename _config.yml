@@ -16,8 +16,10 @@
 title: Taehwang Son
 description: A Jekyll theme for documentation
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://just-the-docs.com" # the base hostname & protocol for your site, e.g. http://example.com
-repository: just-the-docs/just-the-docs # for github-metadata
+# url: "https://just-the-docs.com" # the base hostname & protocol for your site, e.g. http://example.com
+# repository: just-the-docs/just-the-docs # for github-metadata
+url: "https://taehwangson.github.io"
+repository: taehwangson/taehwangson.github.io
 
 permalink: pretty
 
@@ -128,9 +130,9 @@ nav_enabled: true
 nav_sort: case_sensitive # Capital letters sorted before lowercase
 
 # External navigation links
-nav_external_links:
-  - title: Just the Docs on GitHub
-    url: https://github.com/just-the-docs/just-the-docs
+# nav_external_links:
+#   - title: Just the Docs on GitHub
+#     url: https://github.com/just-the-docs/just-the-docs
 
 # Show navigation error report
 nav_error_report: true # default is false/nil.
@@ -213,6 +215,11 @@ sass:
   silence_deprecations: ["import"] # https://github.com/just-the-docs/just-the-docs/issues/1607
 
 
-footer_content: ""
-gh_edit_link: false
+
+search_enabled: false
 aux_links: null
+nav_external_links: []
+gh_edit_link: false
+footer_content: ""
+last_edit_timestamp: false
+# back_to_top: false
