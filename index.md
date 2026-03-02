@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Taehwang Son
+title: About me
 nav_order: 1
 ---
 
