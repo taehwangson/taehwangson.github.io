@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .sensor-target {
+    width: 1936px;
+    height: 1216px;
+    display: flex;
+    margin: 20px auto;
+    border: 1px solid #444;
+  }
+
+  .section {
+    height: 100%;
+    flex: 1;
+    position: relative;
+    image-rendering: pixelated; /* Critical for 1:1 mapping */
+  }
+
+  .label {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 4px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 10;
+  }
+
+  /* 50% Duty Cycle Gradients (Square Waves) */
+  /* Pitch 2: 1px Black | 1px White */
+  .p2  { background: repeating-linear-gradient(90deg, black, black 1px, white 1px, white 2px); }
+  
+  /* Pitch 4: 2px Black | 2px White */
+  .p4  { background: repeating-linear-gradient(90deg, black, black 2px, white 2px, white 4px); }
+  
+  /* Pitch 8: 4px Black | 4px White */
+  .p8  { background: repeating-linear-gradient(90deg, black, black 4px, white 4px, white 8px); }
+  
+  /* Pitch 16: 8px Black | 8px White */
+  .p16 { background: repeating-linear-gradient(90deg, black, black 8px, white 8px, white 16px); }
+  
+  /* Pitch 32: 16px Black | 16px White */
+  .p32 { background: repeating-linear-gradient(90deg, black, black 16px, white 16px, white 32px); }
+  
+  /* Pitch 64: 32px Black | 32px White */
+  .p64 { background: repeating-linear-gradient(90deg, black, black 32px, white 32px, white 64px); }
+
+</style>
+</head>
+<body>
+
+<h2 style="text-align: center;">1:1 Pixel Mapping - 50% Duty Cycle (Square Wave)</h2>
+
+<div class="sensor-target">
+  <div class="section p2"> <div class="label">P: 2px (1/1)</div> </div>
+  <div class="section p4"> <div class="label">P: 4px (2/2)</div> </div>
+  <div class="section p8"> <div class="label">P: 8px (4/4)</div> </div>
+  <div class="section p16"><div class="label">P: 16px (8/8)</div></div>
+  <div class="section p32"><div class="label">P: 32px (16/16)</div></div>
+  <div class="section p64"><div class="label">P: 64px (32/32)</div></div>
+</div>
+
+</body>
+</html>

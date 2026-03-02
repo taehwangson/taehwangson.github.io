@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/display-performance-measurement/index.md",
+                "file": "docs/camera-isp-development/Index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Index"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/display-performance-measurement/index.md",
+                "file": "docs/camera-isp-development/Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for index"
+              "title": "Backlinks for Index"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/display-performance-measurement/index.md",
+                "file": "docs/camera-isp-development/Index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from index"
+              "title": "Outgoing links from Index"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/display-performance-measurement/index.md",
+                "file": "docs/camera-isp-development/Index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of Index"
             }
           }
         ]
@@ -183,12 +183,26 @@
       "bases:Create new base": false
     }
   },
-  "active": "aaefd1bfba2a995a",
+  "active": "d984a73e6b4abf76",
   "lastOpenFiles": [
+    "docs/display-performance-measurement/index.md",
+    "docs/camera-isp-development/Index.md",
+    "docs/Camera ISP development 2c50632bd8ca80b088f5d7b4145b68d6.md",
+    "docs/camera-isp-development/image.png",
+    "docs/camera-isp-development/image 99.png",
+    "docs/camera-isp-development/image 98.png",
+    "docs/camera-isp-development/image 97.png",
+    "docs/camera-isp-development/image 96.png",
+    "docs/camera-isp-development/image 95.png",
+    "docs/camera-isp-development/image 94.png",
+    "docs/camera-isp-development/image 93.png",
+    "docs/camera-isp-development/image 92.png",
+    "docs/camera-isp-development/image 91.png",
+    "docs/camera-isp-development/Line_periodic.html",
+    "docs/camera-isp-development",
     "assets/js/mathjax-script-type.js",
     "assets/js/mathtex-script-type.js",
     "_layouts/mathjax.html",
-    "_includes/mathjax.html",
-    "docs/display-performance-measurement/index.md"
+    "_includes/mathjax.html"
   ]
 }
