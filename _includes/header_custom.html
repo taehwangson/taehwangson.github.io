@@ -1,7 +1,19 @@
-<script type="text/javascript" defer
-  src="{{ '/assets/js/mathjax-script-type.js' | relative_url }}">
+<!-- _includes/head_custom.html -->
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
 </script>
 
-<script type="text/javascript" id="MathJax-script" defer
+<script
+  id="MathJax-script"
+  async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
