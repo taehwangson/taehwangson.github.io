@@ -1,47 +1,109 @@
 ---
 layout: home
-title: Welcome
+title: Taehwang Son
 nav_order: 1
 ---
 
-# 👋 Hi, I'm [Your Name]
-## Software Engineer | [Your Specialty, e.g., Full Stack Developer]
+# Taehwang Son, Ph.D.
+Optical Systems Engineer  
+Cambridge, MA  
 
 ---
 
 {: .important }
-> **About Me:** I specialize in building scalable web applications and solving complex logic problems. Currently exploring the intersection of AI and user experience.
+> Optical engineer with 10+ years of experience in imaging system design, optical metrology, and system integration.  
+> Specialized in semiconductor inspection, fluorescence imaging, and advanced optical modeling.
 
 ---
 
-## 🛠 Tech Stack
+## 🔬 About Me
 
-| Category | Tools |
-| :--- | :--- |
-| **Languages** | Python, JavaScript, TypeScript, SQL |
-| **Frameworks** | React, Next.js, Node.js |
-| **Tools** | Git, Docker, AWS, GitHub Actions |
+I design and troubleshoot complex optical systems from concept to integration.  
+My background spans biomedical imaging, computational optics, and semiconductor metrology tools.
 
----
+Current focus areas:
 
-## 🚀 Featured Projects
-
-### 📱 Project Name One
-A brief 1-2 sentence description of what this does and why it's cool.
-[View Code](https://github.com/yourusername/project1) | [Live Demo](#)
-
-### 📊 Project Name Two
-Details about the tech used (e.g., "Built with FastAPI and PostgreSQL").
-[View Code](https://github.com/yourusername/project2)
+- Optical system architecture & tolerancing
+- Imaging performance analysis (MTF, PSF, SNR)
+- Polarization & wave optics modeling
+- Rapid prototyping and cross-functional system integration
 
 ---
 
-## 📬 Get in Touch
+## 🛠 Technical Expertise
 
-{: .note }
-I am currently open to new opportunities and collaborations!
-* **Email:** [yourname@email.com]
-* **LinkedIn:** [linkedin.com/in/yourprofile]
-* **Twitter/X:** [@yourhandle]
+### Optical & Hardware
+- Optical system design (Zemax, CODE V)
+- Illumination & imaging architecture
+- Optical alignment & metrology
+- RCWA / FDTD electromagnetic simulation
+- Rapid prototyping (3D printing, CNC, PCB design)
+
+### Software & Analysis
+- Python (NumPy, SciPy, OpenCV, Scikit-image)
+- MATLAB
+- Image processing & computational imaging
+- Deep learning (CNN, PyTorch, TensorFlow)
+- System modeling (SysML)
 
 ---
+
+## 💼 Professional Experience
+
+### Senior Optical Engineer  
+**Nanotronics** — Brooklyn, NY (2024–Present)
+
+- Led development of an epitaxial SiC optical metrology platform
+- Increased DUV photoluminescence imaging throughput by over 100×
+- Integrated multiple metrology modalities into unified architecture
+- Developed image quality metrics including MTF and relative illumination
+- Conducted system-level root cause analysis across mechanical, electrical, and software domains
+
+---
+
+### Senior Engineer, Imaging Microscopy  
+**Vizgen** — Cambridge, MA (2023–2024)
+
+- Built custom optical performance test platforms
+- Developed PSF/SNR evaluation pipelines using Python
+- Performed hardware log analysis and automated failure diagnostics
+- Led process development and technology transfer for next-generation imaging substrates
+
+---
+
+### Research Fellow  
+**MGH / Harvard Medical School** — Boston, MA (2019–2022)
+
+- Designed automated fluorescence imaging systems
+- Implemented nanoparticle detection algorithms
+- Developed large-field-of-view computational imaging systems
+- Performed nanoscale EM modeling (RCWA, FDTD)
+
+---
+
+## 🎓 Education
+
+**University of Arizona**  
+M.S. Optical Sciences (2025–Present)
+
+**Yonsei University**  
+Ph.D. Electrical & Electronic Engineering (2019)  
+B.S. Electrical & Electronic Engineering (2013)
+
+---
+
+## 📚 Selected Publications
+
+- *Nanophotonics* (2022) – Super-resolved 3D near-field mapping  
+- *Biosensors & Bioelectronics* (2019) – Multi-channel plasmon microscopy  
+- *Analytical Chemistry* (2019) – Deep learning for plasmon scattering  
+- *ACS Nano* (2019) – Super-localized live imaging  
+- *Optics Letters* (2018) – Surface plasmon microscopy  
+
+---
+
+## 📬 Contact
+
+- Email: taehwangson1225@gmail.com
+- Location: Cambridge, MA
+- GitHub: https://github.com/taehwangson
