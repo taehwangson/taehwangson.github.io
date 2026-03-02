@@ -12,7 +12,6 @@ nav_order: 6
 by Taehwang Son
 
 
-
 ## 1. Goal
 
 - Accurately compute **CIE 1931 XYZ tristimulus values** from a monitor’s display using spectral measurements and the **CIE 1931 2° standard observer** color matching functions.
