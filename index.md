@@ -10,27 +10,17 @@ Cambridge, MA
 
 ---
 
-{: .important }
-> Optical engineer with 10+ years of experience in imaging system design, optical metrology, and system integration.  
-> Specialized in semiconductor inspection, fluorescence imaging, and advanced optical modeling.
+## About Me
+
+- Optical engineer with 10+ years of experience in imaging system design, optical metrology, and system integration.  
+- Specialized in semiconductor inspection, fluorescence imaging, and advanced optical modeling.
+- Design and troubleshoot complex optical systems from concept to integration.  
+- Biomedical imaging, computational optics, and semiconductor metrology tools.
+
 
 ---
 
-## 🔬 About Me
-
-I design and troubleshoot complex optical systems from concept to integration.  
-My background spans biomedical imaging, computational optics, and semiconductor metrology tools.
-
-Current focus areas:
-
-- Optical system architecture & tolerancing
-- Imaging performance analysis (MTF, PSF, SNR)
-- Polarization & wave optics modeling
-- Rapid prototyping and cross-functional system integration
-
----
-
-## 🛠 Technical Expertise
+## Technical Expertise
 
 ### Optical & Hardware
 - Optical system design (Zemax, CODE V)
@@ -48,10 +38,11 @@ Current focus areas:
 
 ---
 
-## 💼 Professional Experience
+## Professional Experience
 
-### Senior Optical Engineer  
-**Nanotronics** — Brooklyn, NY (2024–Present)
+### **Nanotronics** — Brooklyn, NY 
+Senior Optical Engineer  (Jul 2025 – Present)  
+Optical Engineer  (May 2024 – Jul 2025)
 
 - Led development of an epitaxial SiC optical metrology platform
 - Increased DUV photoluminescence imaging throughput by over 100×
@@ -62,7 +53,7 @@ Current focus areas:
 ---
 
 ### Senior Engineer, Imaging Microscopy  
-**Vizgen** — Cambridge, MA (2023–2024)
+**Vizgen** — Cambridge, MA (Jan 2023 – Apr 2024)
 
 - Built custom optical performance test platforms
 - Developed PSF/SNR evaluation pipelines using Python
@@ -81,29 +72,36 @@ Current focus areas:
 
 ---
 
-## 🎓 Education
+## Education
 
 **University of Arizona**  
 M.S. Optical Sciences (2025–Present)
 
 **Yonsei University**  
-Ph.D. Electrical & Electronic Engineering (2019)  
-B.S. Electrical & Electronic Engineering (2013)
+Ph.D. Electrical & Electronic Engineering  
+B.S. Electrical & Electronic Engineering 
 
 ---
 
-## 📚 Selected Publications
+## Selected Publications
 
-- *Nanophotonics* (2022) – Super-resolved 3D near-field mapping  
-- *Biosensors & Bioelectronics* (2019) – Multi-channel plasmon microscopy  
-- *Analytical Chemistry* (2019) – Deep learning for plasmon scattering  
-- *ACS Nano* (2019) – Super-localized live imaging  
-- *Optics Letters* (2018) – Surface plasmon microscopy  
+
+- T. Son et al., “Super-resolved three-dimensional near-field mapping by defocused imaging
+and tracking of fluorescent emitters.” Nanophononics, 2022.
+- T. Son et al., "Enhanced surface plasmon microscopy based on multi-channel spatial light
+switching for label-free neuronal imaging," Biosensors and Bioelectronics, 2019.
+- G. Moon†
+, T. Son† et al., “Deep Learning Approach for Enhanced Detection of Surface
+Plasmon Scattering,” Analytical Chemistry, 2019.
+- T. Son et al., “Super-localized three-dimensional live imaging of mitochondrial dynamics in
+neuron using plasmonic nanohole arrays,” ACS Nano 13(3), 2019.
+- T. Son et al.,"Surface plasmon microscopy by spatial light switching for label-free imaging
+with enhanced resolution," Optics Letters, 2018.
+- T. Son et al.,"Label-free quantification of cell-to-substrate separation by surface plasmon
+resonance microscopy," Optics Communications, 2018.
 
 ---
 
-## 📬 Contact
+## Contact
 
 - Email: taehwangson1225@gmail.com
-- Location: Cambridge, MA
-- GitHub: https://github.com/taehwangson
