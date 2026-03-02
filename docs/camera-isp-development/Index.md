@@ -625,13 +625,13 @@ While the Luminance (Y) channel path targets stochastic grain and edge enhance
 
 Initially, a 3×3 median filter is applied to the Chroma channels to remove impulse noise. Subsequently, the pixel values are modulated according to the following relationship:
 
-$C_{out,r} = 0.5+(C_{in,r}-0.5)\times(1-M(|E|))$
+$$C_{out,r} = 0.5+(C_{in,r}-0.5)\times(1-M({\mid}E{\mid}))$$
 
-$C_{out,b} = 0.5+(C_{in,b}-0.5)\times(1-M(|E|))$
+$$C_{out,b} = 0.5+(C_{in,b}-0.5)\times(1-M({\mid}E{\mid}))$$
 
 ![image.png](images/image-102.png)
 
-Where $M(|E|)$ represents the suppression Mask derived from the Luma edge map. Under high-gradient conditions (strong edges), the term $(1-M(|E|))$ approaches 0, effectively desaturating the pixel to neutral gray. Conversely, in low-gradient regions (weak edges), the term approaches 1, preserving the original chromatic integrity.
+Where $ M({\mid}E{\mid})$ represents the suppression Mask derived from the Luma edge map. Under high-gradient conditions (strong edges), the term $(1-M({\mid}E{\mid}))$ approaches 0, effectively desaturating the pixel to neutral gray. Conversely, in low-gradient regions (weak edges), the term approaches 1, preserving the original chromatic integrity.
 
 In an outdoor night scene, false color spots on vehicle surfaces are effectively neutralized using thresholds of `threshold_low=0.1, threshold_high=0.3` .
 
