@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "94d488e17e08cd06",
+        "id": "ae4270a14552addf",
         "type": "tabs",
         "children": [
           {
-            "id": "aaefd1bfba2a995a",
+            "id": "b7bca7e5505a7fef",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "index"
             }
-          },
-          {
-            "id": "01968e70143d0ca8",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "docs/camera-isp-development/images/image-123.png"
-              },
-              "icon": "lucide-image",
-              "title": "image-123"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/camera-isp-development/images/image-123.png",
+                "file": "docs/display-performance-measurement/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for image-123"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -126,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/camera-isp-development/images/image-123.png",
+                "file": "docs/display-performance-measurement/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from image-123"
+              "title": "Outgoing links from index"
             }
           },
           {
@@ -169,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/camera-isp-development/images/image-123.png",
+                "file": "docs/display-performance-measurement/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of image-123"
+              "title": "Outline of index"
             }
           }
         ]
@@ -196,8 +183,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "d984a73e6b4abf76",
+  "active": "b7bca7e5505a7fef",
   "lastOpenFiles": [
+    "docs/camera-isp-development/Index.md",
+    "center-image.css",
+    "center-image.css.rtf.sb-b3196086-McJHk9",
+    "center-image.css.rtf",
+    "docs/display-performance-measurement/index.md",
+    "docs/camera-isp-development/images/image-123.png",
     "docs/camera-isp-development/images/image-122.png",
     "docs/camera-isp-development/images/image-121.png",
     "docs/camera-isp-development/images/image-120.png",
@@ -207,10 +200,6 @@
     "docs/camera-isp-development/images/image-116.png",
     "docs/camera-isp-development/images/image-115.png",
     "docs/camera-isp-development/images/image-114.png",
-    "docs/camera-isp-development/images/image-113.png",
-    "docs/camera-isp-development/images/image-112.png",
-    "docs/camera-isp-development/Index.md",
-    "docs/display-performance-measurement/index.md",
     "docs/camera-isp-development/images",
     "docs/Camera ISP development 2c50632bd8ca80b088f5d7b4145b68d6.md",
     "docs/camera-isp-development/Line_periodic.html",
