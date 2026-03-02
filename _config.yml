@@ -195,13 +195,12 @@ plugins:
   - jekyll-include-cache
   - jekyll-sitemap
 
+markdown: kramdown
+
 kramdown:
+  input: GFM
   math_engine: mathjax
-  math_engine_opts:
-    preview: "none"
-  syntax_highlighter_opts:
-    block:
-      line_numbers: false
+  syntax_highlighter: rouge
 
 compress_html:
   clippings: all
@@ -219,10 +218,8 @@ sass:
 
 
 
-search_enabled: false
 aux_links: null
 nav_external_links: []
 gh_edit_link: false
 footer_content: ""
 last_edit_timestamp: false
-# back_to_top: false

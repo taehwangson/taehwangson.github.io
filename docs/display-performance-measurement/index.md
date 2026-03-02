@@ -11,6 +11,9 @@ nav_order: 6
 
 by Taehwang Son
 
+$$
+E = mc^2
+$$
 
 ## 1. Goal
 
@@ -229,14 +232,3 @@ Where:
 
 [4] https://www.imatest.com/docs/colortone_ref/
 
-
-<!-- <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    }
-  };
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>  -->
