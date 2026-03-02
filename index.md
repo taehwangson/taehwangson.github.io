@@ -3,6 +3,9 @@ layout: home
 title: About me
 nav_order: 1
 ---
+$$
+E = mc^2
+$$
 
 # Taehwang Son, Ph.D.
 Optical Systems Engineer  
