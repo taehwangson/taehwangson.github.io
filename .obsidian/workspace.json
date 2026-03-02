@@ -25,14 +25,12 @@
             "id": "01968e70143d0ca8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "docs/camera-isp-development/Index.md",
-                "mode": "source",
-                "source": false
+                "file": "docs/camera-isp-development/images/image 31.png"
               },
-              "icon": "lucide-file",
-              "title": "Index"
+              "icon": "lucide-image",
+              "title": "image 31"
             }
           }
         ],
@@ -93,7 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 431.5
   },
   "right": {
     "id": "6a0b1bce2846462b",
@@ -109,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/camera-isp-development/Index.md",
+                "file": "docs/camera-isp-development/images/image 31.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +117,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Index"
+              "title": "Backlinks for image 31"
             }
           },
           {
@@ -128,12 +126,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/camera-isp-development/Index.md",
+                "file": "docs/camera-isp-development/images/image 31.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Index"
+              "title": "Outgoing links from image 31"
             }
           },
           {
@@ -171,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/camera-isp-development/Index.md",
+                "file": "docs/camera-isp-development/images/image 31.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Index"
+              "title": "Outline of image 31"
             }
           }
         ]
@@ -200,20 +198,21 @@
   },
   "active": "01968e70143d0ca8",
   "lastOpenFiles": [
-    "docs/display-performance-measurement/index.md",
+    "docs/camera-isp-development/images/image 27.png",
+    "docs/camera-isp-development/images/image-26.png",
+    "docs/camera-isp-development/images/image-25.png",
+    "docs/camera-isp-development/images/image-24.png",
+    "docs/camera-isp-development/images/image-23.png",
+    "docs/camera-isp-development/images/image-22.png",
+    "docs/camera-isp-development/images/image-21.png",
+    "docs/camera-isp-development/images/image-20.png",
+    "docs/camera-isp-development/images/image-19.png",
+    "docs/camera-isp-development/images/image-18.png",
+    "docs/camera-isp-development/images/image-17.png",
     "docs/camera-isp-development/Index.md",
-    "docs/display-performance-measurement/images/1dd97da1-0c77-44c7-a95a-7aca922c7f82.png",
-    "docs/camera-isp-development/images/13-1._GalaxyA8_20251215_165452.jpg",
-    "docs/camera-isp-development/images/image 124.png",
+    "docs/display-performance-measurement/index.md",
     "docs/camera-isp-development/images",
-    "docs/camera-isp-development/images/ScreenRecording.gif",
     "docs/Camera ISP development 2c50632bd8ca80b088f5d7b4145b68d6.md",
-    "docs/camera-isp-development/images/image.png",
-    "docs/camera-isp-development/images/image 99.png",
-    "docs/camera-isp-development/images/image 98.png",
-    "docs/camera-isp-development/images/image 97.png",
-    "docs/camera-isp-development/images/image 96.png",
-    "docs/camera-isp-development/images/image 95.png",
     "docs/camera-isp-development/Line_periodic.html",
     "docs/camera-isp-development",
     "assets/js/mathjax-script-type.js",

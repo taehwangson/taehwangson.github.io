@@ -28,7 +28,7 @@ Max angular FOV +-54 deg. With the sensor, Angular FOV = +- 48 deg, Wide angle, 
 
 Black level was acquired by capturing an image with the sensor capped (no lens) using a short exposure time (100μs). Average pixel intensity was calculated to determine the black level. The black level is 8DN.
 
-![Black level test data](image%201.png)
+![Black level test data](docs/camera-isp-development/images/image-1.png)
 
 Black level test data
 
@@ -38,9 +38,9 @@ Black level test data
 
 The lens shading correction calibration image was captured using a white monitor screen to simulate uniform illumination. For each color channel (R, G1, G2, B), the image was Gaussian-blurred and normalized so that maximum values remained unchanged by LSC. After applying LSC, the image became flat. The gain map is not symmetrical. This could be caused by the camera optical axis not being well aligned with the monitor. 
 
-![image.png](image%202.png)
+![image.png](docs/camera-isp-development/images/image-2.png)
 
-![Lens shading correction calibration](image%203.png)
+![Lens shading correction calibration](docs/camera-isp-development/images/image-3.png)
 
 Lens shading correction calibration
 
@@ -50,7 +50,7 @@ Lens shading correction calibration
 
 Using the image obtained after LSC, white balance was calibrated by applying gains to the blue and red channels to match the average intensity of the green channel. After applying the gains, the greenish raw image became a gray image.
 
-![Calibration white balance data](image%204.png)
+![Calibration white balance data](docs/camera-isp-development/images/image-4.png)
 
 Calibration white balance data
 
@@ -60,23 +60,23 @@ Calibration white balance data
 
 To calibrate color, a 24 colorchecker was displayed on an sRGB monitor and imaged with the camera. The [24 colorchecker](https://github.com/taehwangson/ColorChecker-App) was developed previously for monitor color measurement.
 
-![Screenshot of 24 colorchecker ](image%205.png)
+![Screenshot of 24 colorchecker ](docs/camera-isp-development/images/image-5.png)
 
 Screenshot of 24 colorchecker 
 
  It is known that the RGB to RGB transformation is done by a 3x3 matrix. The matrix M was calculated using pseudo-inverse ([np.linalg.pinv](https://numpy.org/doc/2.3/reference/generated/numpy.linalg.pinv.html)).
 
-![reference: [Book] Digital Color Management, Appendix H](image%206.png)
+![reference: [Book] Digital Color Management, Appendix H](docs/camera-isp-development/images/image-6.png)
 
 reference: [Book] Digital Color Management, Appendix H
 
 After the Color Correction Matrix (CCM) application, the 24 ColorChecker's colors looked realistic and close to the screenshot. RGB data were transformed to the u′v′ color space to assess the calibration quality. In terms of the summation of the distance between the reference points and the measured points, the CCM-applied image showed more than twice the performance improvement
 
-![image.png](image%207.png)
+![image.png](docs/camera-isp-development/images/image-7.png)
 
-![image.png](image%208.png)
+![image.png](docs/camera-isp-development/images/image-8.png)
 
-![image.png](image%209.png)
+![image.png](image-9.png)
 
 ---
 
@@ -84,13 +84,13 @@ After the Color Correction Matrix (CCM) application, the 24 ColorChecker's col
 
 The full ISP comprises multiple steps. This prototype section covers only the essential processes required to transform raw images into human-visible quality images. In the later sections, additional steps will be added, or existing steps will be modified for better performance.
 
-![Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analysis of a Baseline ISP Pipeline](image%2010.png)
+![Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analysis of a Baseline ISP Pipeline](image-10.png)
 
 Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analysis of a Baseline ISP Pipeline
 
 ### 1. BLC, LSC, AWB application
 
-![image.png](image%2011.png)
+![image.png](image-11.png)
 
 ---
 
@@ -98,7 +98,7 @@ Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analys
 
 To remove shot noise or fixed pattern noise, a bilateral filter was applied. A bilateral filter is known as a non-linear filter that reduces noise while sharply preserving edges and fine details
 
-![image.png](image%2012.png)
+![image.png](image-12.png)
 
 ---
 
@@ -106,7 +106,7 @@ To remove shot noise or fixed pattern noise, a bilateral filter was applied. A b
 
 To implement a simple auto white balance step, the gray world assumption was used. Even after white balance calibration, the image shows that the red and blue channels are weaker than the green channel. Under the gray-world assumption, the red and blue channel gains were adjusted. The edge of the monitor screen looks closer to white after AWB.
 
-![image.png](image%2013.png)
+![image.png](image-13.png)
 
 ---
 
@@ -114,7 +114,7 @@ To implement a simple auto white balance step, the gray world assumption was use
 
 After AWB, the raw data was finally converted to RGB using the OpenCV module. Before this step, every color image presented above was just for presentation, and the files were in raw format. Here, the simple bilinear interpolation was applied for RGB conversion 
 
-![image.png](image%2014.png)
+![image.png](image-14.png)
 
 ---
 
@@ -122,9 +122,9 @@ After AWB, the raw data was finally converted to RGB using the OpenCV module. Be
 
 After normalizing linear RGB sensor data, each channel was encoded using the ITU-R BT.709 Opto-Electronic Transfer Function (OETF). This process is necessary to convert linear light into a perceptually uniform non-linear signal. This encoding ensures that the available bit depth is allocated primarily to the darker tones, which the human vision is more sensitive to. The display device then applies its corresponding inverse function, the Electro-Optical Transfer Function (EOTF), to correctly map the received gamma-corrected input back to linear light output.
 
-![image.png](image%2015.png)
+![image.png](image-15.png)
 
-![image.png](image%2016.png)
+![image.png](image-16.png)
 
 ---
 
@@ -132,9 +132,9 @@ After normalizing linear RGB sensor data, each channel was encoded using the�
 
 The gamma-corrected image was transformed using the calibrated CCM matrix.
 
-![image.png](image%2017.png)
+![image.png](image-17.png)
 
-![Colorchecker 24 image (iPhone16)](image%2018.png)
+![Colorchecker 24 image (iPhone16)](image-18.png)
 
 Colorchecker 24 image (iPhone16)
 
@@ -144,7 +144,7 @@ Colorchecker 24 image (iPhone16)
 
 RGB images are converted into Y′CbCr because human eyes see brightness and color differently. We notice every tiny detail in brightness (Y′), but we are less sensitive to fine details in color (CbCr). It enables us to remove noise more tactically. Eventually, it prioritizes image sharpness and noise reduction based on the strengths and weaknesses of human vision.
 
-![image.png](image%2019.png)
+![image.png](image-19.png)
 
 ---
 
@@ -154,7 +154,7 @@ RGB images are converted into Y′CbCr because human eyes see brightness and co
 
 After color correction, the peripheral pixel color is shifted to green. Especially the darker area is noticeably greenish. It is more obvious after CCM. CCM matrix shifts the green-ish peripheral more green tone.
 
-![image.png](image%2020.png)
+![image.png](image-20.png)
 
 ---
 
@@ -164,7 +164,7 @@ The same ISP pipeline was used for the 24 colorchecker target. The CCM applicati
 
 - 24 Colorcheck image CCM application
 
-![image.png](image%2021.png)
+![image.png](image-21.png)
 
 ---
 
@@ -174,11 +174,11 @@ The LSC calibration image was used as input to the ISP pipeline to detect the co
 
 - Gray image without LSC
 
-![image.png](image%2022.png)
+![image.png](image-22.png)
 
 - Gray image with LSC
 
-![image.png](image%2023.png)
+![image.png](image-23.png)
 
 ---
 
@@ -188,9 +188,9 @@ It turns out the LSC calibration map was generated without the BLC step. Therefo
 
 - Gray image with updated LSC
 
-![image.png](image%2024.png)
+![image.png](image-24.png)
 
-![image.png](image%2025.png)
+![image.png](image-25.png)
 
 ---
 
@@ -208,7 +208,7 @@ This highlights the necessity of using a Lambertian source for experimental LSC 
 
 **(Left: calibration with monitor display, right: calibration with wall)**
 
-![image.png](image%2026.png)
+![image.png](image-26.png)
 
 ![image.png](image%2027.png)
 
@@ -785,7 +785,7 @@ Note that the LED monitor-generated calibration image is not ideal since the LED
 
 [Line_periodic.html](Line_periodic.html)
 
-![image.png](image%20124.png)
+![image.png](image-124.png)
 
 **Noise filter tuner**
 
