@@ -11,21 +11,10 @@ Updated on Jan. 20, 2025, Taehwang Son
 
 ## Camera spec
 
-![Camera used in the test](images/image.png)
-
+<img src="./images/image.png" height="300" style="display: block; margin: 0 auto;" />
 Camera used in the test
 
-
-
-
 Sensor: [JAI GO-2400C-USB](https://www.jai.com/products/go-2400c-usb) Sony IMX174,  2.3 megapixels (1920x1200), pixel 5.86μm
-
-
-
-
-<img src="./images/image.png" height="300" style="display: block; margin: 0 auto;" />
-
-
 Lens: [LM6HC](https://www.kowa-lenses.com/LM6HC-1-6mm-5MP-C-Mount-Lens/10904?srsltid=AfmBOor15VPXkPNz9Smi4Cd0WQA2JmWWfSadqVhDm4c0PdeqIAd5KcbP) ( 1" f= 6mm 5MP C-Mount Lens ) F/1.8 
 Max angular FOV +-54 deg. With the sensor, Angular FOV = +- 48 deg, Wide angle, but with some distortion.
 
@@ -594,7 +583,7 @@ cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11
 
 While NLM filtering effectively suppresses noise, the non-ideal nature of the filter introduces spatial blurring and reduces edge contrast. To recover these details, Laplacian-based edge enhancement with a soft-thresholding coring strategy was employed. The coring function below applies a non-linear gain ramp to prevent the 'ringing' typically associated with steep Laplacian transitions.
 
-$Y_{sharpened}=Y_{original}+M(|E|)*gain$
+$Y_{sharpened}=Y_{original}+M({\mid}E{\mid})*gain$
 
 ![image.png](images/image-102.png)
 
@@ -690,11 +679,11 @@ In contrast, spatial noise—commonly referred to as **Fixed Pattern Noise (FPN
 
 By analyzing the mean intensity of 100-frame averaged dark images across varying gains (G) and exposure times (t), we observed a high degree of linearity (R² = 0.97). This suggests that the intensity of a pixel at coordinates (i,j) can be modeled linearly:
 
-$I_{FPN}(i,j)=G*[S(i,j)+K(i,j)*t+O_{input}(i,j)]+O_{output}(i,j)$
+$$I_{FPN}(i,j)=G*[S(i,j)+K(i,j)*t+O_{input}(i,j)]+O_{output}(i,j)$$
 
 where: S(i,j): The photon-induced signal, defined as:
 
-$S(i,j)=\frac{A*E(i,j)*t*QE*G_{sys}}{hc/\lambda}$ 
+$$S(i,j)=\frac{A*E(i,j)*t*QE*G_{sys}}{hc/\lambda}$$ 
 
 note that A, E, QE, and $G_{sys}$ are sensor area, irradiance, quantum field, and system conversion factor.
 
@@ -722,7 +711,7 @@ To isolate the model parameters, a two-step calibration was performed.
 
 First, images were captured at a minimum exposure time (t=10μs) to suppress the contributions of S(i,j) and K(i,j). In this regime, the model simplifies to a linear function of gain:
 
-$I_{FPN}(i,j)≈G⋅O_{input}(i,j)+O_{output}(i,j)$
+$$ I_{FPN}(i,j)≈G⋅O_{input}(i,j)+O_{output}(i,j) $$
 
 Plotting intensity versus gain allowed us to extract $O_{input}(i,j)$ as the slope of the linear fit. While most pixels remained near the baseline black level, specific "hot pixels" exhibited significant slopes, identifying them as high-offset outliers.
 
@@ -738,9 +727,9 @@ $I_{FPN}(i,j)=(G⋅K)t+O_{output}(i,j)$
 
 The slope of the intensity versus exposure time plot yields the dark current rate K(i,j). This parameter is critical for night vision applications, where long integration times amplify thermal leakage.
 
-![Calibration for k(i,j). The left graph shows $I_{FPN}(i,j)=G(i,j)*[K(i,j)*t]+O_{output}(i,j)$ relation because $O_{output}(i,j)$  is corrected. The slope of linear fit line is K(i,j).](images/image-119.png)
+![](images/image-119.png)
 
-Calibration for k(i,j). The left graph shows $I_{FPN}(i,j)=G(i,j)*[K(i,j)*t]+O_{output}(i,j)$ relation because $O_{output}(i,j)$  is corrected. The slope of linear fit line is K(i,j).
+Calibration for k(i,j). The left graph shows $I_{FPN}(i,j)=G(i,j) \cdot [K(i,j) \cdot t]+O_{output}(i,j)$ relation because $O_{output}(i,j)$  is corrected. The slope of linear fit line is K(i,j).
 
 **4. Result and discussion**
 

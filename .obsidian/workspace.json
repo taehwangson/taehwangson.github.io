@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/display-performance-measurement/index.md",
+                "file": "docs/camera-isp-development/Index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Index"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/display-performance-measurement/index.md",
+                "file": "docs/camera-isp-development/Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for index"
+              "title": "Backlinks for Index"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/display-performance-measurement/index.md",
+                "file": "docs/camera-isp-development/Index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from index"
+              "title": "Outgoing links from Index"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/display-performance-measurement/index.md",
+                "file": "docs/camera-isp-development/Index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of Index"
             }
           }
         ]
@@ -185,11 +185,11 @@
   },
   "active": "b7bca7e5505a7fef",
   "lastOpenFiles": [
+    "docs/display-performance-measurement/index.md",
     "docs/camera-isp-development/Index.md",
     "center-image.css",
     "center-image.css.rtf.sb-b3196086-McJHk9",
     "center-image.css.rtf",
-    "docs/display-performance-measurement/index.md",
     "docs/camera-isp-development/images/image-123.png",
     "docs/camera-isp-development/images/image-122.png",
     "docs/camera-isp-development/images/image-121.png",
