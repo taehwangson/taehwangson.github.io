@@ -8,9 +8,7 @@ nav_order: 1
 Optical Systems Engineer  
 Cambridge, MA  
 
-$$
-E = mc^2
-$$
+
 
 ---
 

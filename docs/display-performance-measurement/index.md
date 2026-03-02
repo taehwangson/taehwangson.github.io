@@ -11,16 +11,13 @@ nav_order: 6
 
 by Taehwang Son
 
-$$
-E = mc^2
-$$
 
 ## 1. Goal
 
 - Accurately compute **CIE 1931 XYZ tristimulus values** from a monitor’s display using spectral measurements and the **CIE 1931 2° standard observer** color matching functions.
 - Evaluate the monitor’s **chromaticity accuracy** by comparing the measured chromaticities of ColorChecker patches against known **sRGB reference values**.
 - Apply a **Color Correction Matrix (CCM)** to compensate for errors due to the uncalibrated spectrometer, optimizing the transform in **CIELAB** space.
-- Quantify color reproduction accuracy using  $\Delta E_{ab}^*$ and  $\Delta E_{uv}^*$ metrics in **CIELAB** and **CIELUV** spaces, respectively.
+- Quantify color reproduction accuracy using  $\Delta E_{ab}^{\ast}$ and  $\Delta E_{uv}^{\ast}$ metrics in **CIELAB** and **CIELUV** spaces, respectively.
 - Determine **sRGB gamut coverage** by comparing the chromaticity triangle formed by the measured RGB primaries against the reference sRGB triangle in **CIE 1976 u′v′** space.
 
 ---
