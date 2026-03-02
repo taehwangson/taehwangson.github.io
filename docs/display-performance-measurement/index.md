@@ -45,7 +45,7 @@ by Taehwang Son
 
 Multimode fiber end with a diffuser
 
-![24 Color checker measurement with multimode fiber](images/image.png)
+![24 Color checker measurement with multimode fiber](docs/display-performance-measurement/images/image.png)
 
 24 Color checker measurement with multimode fiber
 
@@ -193,7 +193,7 @@ I found [a PDF version of the color checker](https://en.wikipedia.org/wiki/File:
 
 Using Python Dash, I made a simple GUI-based application for generating color checker images. [**ColorChecker-App** GitHub page](https://github.com/taehwangson/ColorChecker-App)
 
-![ScreenRecording.gif](images/ScreenRecording.gif)
+![ScreenRecording.gif](docs/display-performance-measurement/images/ScreenRecording.gif)
 
 ### b) Color Correction Matrix (CCM)
 

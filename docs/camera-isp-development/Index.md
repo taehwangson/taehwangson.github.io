@@ -1,10 +1,17 @@
+---
+title: Camera ISP development
+layout: default
+comments: true
+nav_order: 5
+---
+
 # Camera ISP development
 
 Updated on Jan. 20, 2025, Taehwang Son
 
 ## Camera spec
 
-![Camera used in the test](docs/camera-isp-development/image.png)
+![Camera used in the test](docs/camera-isp-development/images/image.png)
 
 Camera used in the test
 
@@ -768,7 +775,7 @@ Note that the LED monitor-generated calibration image is not ideal since the LED
 
 **Color checker generator** 
 
-![ScreenRecording.gif](docs/camera-isp-development/ScreenRecording.gif)
+![ScreenRecording.gif](docs/camera-isp-development/images/ScreenRecording.gif)
 
 **Dot grid pattern generator** 
 
