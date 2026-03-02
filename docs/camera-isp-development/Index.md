@@ -11,7 +11,7 @@ Updated on Jan. 20, 2025, Taehwang Son
 
 ## Camera spec
 
-![Camera used in the test](docs/camera-isp-development/images/image.png)
+![Camera used in the test](images/image.png)
 
 Camera used in the test
 
@@ -28,7 +28,7 @@ Max angular FOV +-54 deg. With the sensor, Angular FOV = +- 48 deg, Wide angle, 
 
 Black level was acquired by capturing an image with the sensor capped (no lens) using a short exposure time (100μs). Average pixel intensity was calculated to determine the black level. The black level is 8DN.
 
-![Black level test data](docs/camera-isp-development/images/image-1.png)
+![Black level test data](images/image-1.png)
 
 Black level test data
 
@@ -38,9 +38,9 @@ Black level test data
 
 The lens shading correction calibration image was captured using a white monitor screen to simulate uniform illumination. For each color channel (R, G1, G2, B), the image was Gaussian-blurred and normalized so that maximum values remained unchanged by LSC. After applying LSC, the image became flat. The gain map is not symmetrical. This could be caused by the camera optical axis not being well aligned with the monitor. 
 
-![image.png](docs/camera-isp-development/images/image-2.png)
+![image.png](images/image-2.png)
 
-![Lens shading correction calibration](docs/camera-isp-development/images/image-3.png)
+![Lens shading correction calibration](images/image-3.png)
 
 Lens shading correction calibration
 
@@ -50,7 +50,7 @@ Lens shading correction calibration
 
 Using the image obtained after LSC, white balance was calibrated by applying gains to the blue and red channels to match the average intensity of the green channel. After applying the gains, the greenish raw image became a gray image.
 
-![Calibration white balance data](docs/camera-isp-development/images/image-4.png)
+![Calibration white balance data](images/image-4.png)
 
 Calibration white balance data
 
@@ -60,23 +60,23 @@ Calibration white balance data
 
 To calibrate color, a 24 colorchecker was displayed on an sRGB monitor and imaged with the camera. The [24 colorchecker](https://github.com/taehwangson/ColorChecker-App) was developed previously for monitor color measurement.
 
-![Screenshot of 24 colorchecker ](docs/camera-isp-development/images/image-5.png)
+![Screenshot of 24 colorchecker ](images/image-5.png)
 
 Screenshot of 24 colorchecker 
 
  It is known that the RGB to RGB transformation is done by a 3x3 matrix. The matrix M was calculated using pseudo-inverse ([np.linalg.pinv](https://numpy.org/doc/2.3/reference/generated/numpy.linalg.pinv.html)).
 
-![reference: [Book] Digital Color Management, Appendix H](docs/camera-isp-development/images/image-6.png)
+![reference: [Book] Digital Color Management, Appendix H](images/image-6.png)
 
 reference: [Book] Digital Color Management, Appendix H
 
 After the Color Correction Matrix (CCM) application, the 24 ColorChecker's colors looked realistic and close to the screenshot. RGB data were transformed to the u′v′ color space to assess the calibration quality. In terms of the summation of the distance between the reference points and the measured points, the CCM-applied image showed more than twice the performance improvement
 
-![image.png](docs/camera-isp-development/images/image-7.png)
+![image.png](images/image-7.png)
 
-![image.png](docs/camera-isp-development/images/image-8.png)
+![image.png](images/image-8.png)
 
-![image.png](image-9.png)
+![image.png](images/image-9.png)
 
 ---
 
@@ -84,13 +84,13 @@ After the Color Correction Matrix (CCM) application, the 24 ColorChecker's col
 
 The full ISP comprises multiple steps. This prototype section covers only the essential processes required to transform raw images into human-visible quality images. In the later sections, additional steps will be added, or existing steps will be modified for better performance.
 
-![Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analysis of a Baseline ISP Pipeline](image-10.png)
+![Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analysis of a Baseline ISP Pipeline](images/image-10.png)
 
 Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analysis of a Baseline ISP Pipeline
 
 ### 1. BLC, LSC, AWB application
 
-![image.png](image-11.png)
+![image.png](images/image-11.png)
 
 ---
 
@@ -98,7 +98,7 @@ Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analys
 
 To remove shot noise or fixed pattern noise, a bilateral filter was applied. A bilateral filter is known as a non-linear filter that reduces noise while sharply preserving edges and fine details
 
-![image.png](image-12.png)
+![image.png](images/image-12.png)
 
 ---
 
@@ -106,7 +106,7 @@ To remove shot noise or fixed pattern noise, a bilateral filter was applied. A b
 
 To implement a simple auto white balance step, the gray world assumption was used. Even after white balance calibration, the image shows that the red and blue channels are weaker than the green channel. Under the gray-world assumption, the red and blue channel gains were adjusted. The edge of the monitor screen looks closer to white after AWB.
 
-![image.png](image-13.png)
+![image.png](images/image-13.png)
 
 ---
 
@@ -114,7 +114,7 @@ To implement a simple auto white balance step, the gray world assumption was use
 
 After AWB, the raw data was finally converted to RGB using the OpenCV module. Before this step, every color image presented above was just for presentation, and the files were in raw format. Here, the simple bilinear interpolation was applied for RGB conversion 
 
-![image.png](image-14.png)
+![image.png](images/image-14.png)
 
 ---
 
@@ -122,9 +122,9 @@ After AWB, the raw data was finally converted to RGB using the OpenCV module. Be
 
 After normalizing linear RGB sensor data, each channel was encoded using the ITU-R BT.709 Opto-Electronic Transfer Function (OETF). This process is necessary to convert linear light into a perceptually uniform non-linear signal. This encoding ensures that the available bit depth is allocated primarily to the darker tones, which the human vision is more sensitive to. The display device then applies its corresponding inverse function, the Electro-Optical Transfer Function (EOTF), to correctly map the received gamma-corrected input back to linear light output.
 
-![image.png](image-15.png)
+![image.png](images/image-15.png)
 
-![image.png](image-16.png)
+![image.png](images/image-16.png)
 
 ---
 
@@ -132,9 +132,9 @@ After normalizing linear RGB sensor data, each channel was encoded using the�
 
 The gamma-corrected image was transformed using the calibrated CCM matrix.
 
-![image.png](image-17.png)
+![image.png](images/image-17.png)
 
-![Colorchecker 24 image (iPhone16)](image-18.png)
+![Colorchecker 24 image (iPhone16)](images/image-18.png)
 
 Colorchecker 24 image (iPhone16)
 
@@ -144,7 +144,7 @@ Colorchecker 24 image (iPhone16)
 
 RGB images are converted into Y′CbCr because human eyes see brightness and color differently. We notice every tiny detail in brightness (Y′), but we are less sensitive to fine details in color (CbCr). It enables us to remove noise more tactically. Eventually, it prioritizes image sharpness and noise reduction based on the strengths and weaknesses of human vision.
 
-![image.png](image-19.png)
+![image.png](images/image-19.png)
 
 ---
 
@@ -154,7 +154,7 @@ RGB images are converted into Y′CbCr because human eyes see brightness and co
 
 After color correction, the peripheral pixel color is shifted to green. Especially the darker area is noticeably greenish. It is more obvious after CCM. CCM matrix shifts the green-ish peripheral more green tone.
 
-![image.png](image-20.png)
+![image.png](images/image-20.png)
 
 ---
 
@@ -164,7 +164,7 @@ The same ISP pipeline was used for the 24 colorchecker target. The CCM applicati
 
 - 24 Colorcheck image CCM application
 
-![image.png](image-21.png)
+![image.png](images/image-21.png)
 
 ---
 
@@ -174,11 +174,11 @@ The LSC calibration image was used as input to the ISP pipeline to detect the co
 
 - Gray image without LSC
 
-![image.png](image-22.png)
+![image.png](images/image-22.png)
 
 - Gray image with LSC
 
-![image.png](image-23.png)
+![image.png](images/image-23.png)
 
 ---
 
@@ -188,9 +188,9 @@ It turns out the LSC calibration map was generated without the BLC step. Therefo
 
 - Gray image with updated LSC
 
-![image.png](image-24.png)
+![image.png](images/image-24.png)
 
-![image.png](image-25.png)
+![image.png](images/image-25.png)
 
 ---
 
@@ -208,25 +208,25 @@ This highlights the necessity of using a Lambertian source for experimental LSC 
 
 **(Left: calibration with monitor display, right: calibration with wall)**
 
-![image.png](image-26.png)
+![image.png](images/image-26.png)
 
-![image.png](image%2027.png)
+![image.png](images/image-27.png)
 
 **(2) Indoor lighting**
 
 **(Left: calibration with monitor display, right: calibration with wall)**
 
-![image.png](image%2028.png)
+![image.png](images/image-28.png)
 
-![image.png](image%2029.png)
+![image.png](images/image-29.png)
 
 **(3) Outdoor daylight image** 
 
 **(Left: calibration with monitor display, right: calibration with wall)**
 
-![image.png](image%2030.png)
+![image.png](images/image-30.png)
 
-![image.png](image%2031.png)
+![image.png](images/image-31.png)
 
 ---
 
@@ -236,55 +236,55 @@ Bilinear interpolation, a non-adaptive averaging method, is prone to creating ps
 
 In contrast, edge-directed demosaicing methods, such as VNG, overcome this limitation. They adaptively suppress these artifacts by first detecting the direction of sharp edges (high gradients) and then interpolating along that edge, thereby preserving detail and color.
 
-![Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analysis of a Baseline ISP Pipeline](image%2032.png)
+![Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analysis of a Baseline ISP Pipeline](images/image-32.png)
 
 Reference: [Book] Theory and Applications of Smart Cameras, Architectural Analysis of a Baseline ISP Pipeline
 
 (1) Bilinear interpolation
 
-![Exp 15ms, Gain6, [JAI GO-2400C-USB](image%2033.png)
+![Exp 15ms, Gain6, [JAI GO-2400C-USB](images/image-33.png)
 
 Exp 15ms, Gain6, [JAI GO-2400C-USB](https://www.jai.com/products/go-2400c-usb)
 
-![Zoom-in image (left bottom)](image%2034.png)
+![Zoom-in image (left bottom)](images/image-34.png)
 
 Zoom-in image (left bottom)
 
 (2) Variable Number of Gradients (VNG) interpolation
 
-![image.png](image%2035.png)
+![image.png](images/image-35.png)
 
-![image.png](image%2036.png)
+![image.png](images/image-36.png)
 
 (3) Reference image taken by Galaxy A8 star
 
-![image.png](image%2037.png)
+![image.png](images/image-37.png)
 
-![image.png](image%2038.png)
+![image.png](images/image-38.png)
 
 Although VNG interpolation removes color noise where color changes rapidly, it does not remove chromatic change from single-pixel bright spots. This is due to color aliasing, where the bright dot is composed of a few pixels and causes sampling issues under the Bayer pattern. DDFPD uses the local chromatic components (R−G and B−G differences) for both the horizontally and vertically interpolated results. It selects the result that shows greater local color smoothness/homogeneity. However, the example below shows that some degree of false color light spots, even after DDFPD interpolation. Further correction will be discussed later with chroma filtering.
 
 (1) Variable Number of Gradients (VNG) interpolation
 
-![Exp 15ms, Gain6, [JAI GO-2400C-USB](image%2035.png)
+![Exp 15ms, Gain6, [JAI GO-2400C-USB](images/image-35.png)
 
 Exp 15ms, Gain6, [JAI GO-2400C-USB](https://www.jai.com/products/go-2400c-usb)
 
-![Zoom-in image (left bottom)](image%2039.png)
+![Zoom-in image (left bottom)](images/image-39.png)
 
 Zoom-in image (left bottom)
 
 (2) DDFPD (Demosaicing With Directional Filtering and *a posteriori* Decision) - [D. Menon 2007](https://ieeexplore.ieee.org/document/4032820)
 
-![image.png](image%2040.png)
+![image.png](images/image-40.png)
 
-![image.png](image%2041.png)
+![image.png](images/image-41.png)
 
 (3) Reference image taken by Galaxy A8 star
 
-![image.png](image%2037.png)
+![image.png](images/image-37.png)
 
-![image.png](image%2042.png)
+![image.png](images/image-42.png)
 
 ---
 
@@ -298,7 +298,7 @@ $Gain_{R,adjusted}= 1+(Gain_R -1)*w_{gwh}$
 
 $Gain_{B,adjusted}= 1+(Gain_B -1)*w_{gwh}$   
 
-![Ref: [egansign.com](image%2043.png)
+![Ref: [egansign.com](images/image-43.png)
 
 Ref: [egansign.com](http://egansign.com/)
 
@@ -306,27 +306,27 @@ On the other hand, outdoor daylight images demonstrate superior color fidelity w
 
 Gray world hypothesis weight $w_{gwh}$ =1.0
 
-![image.png](image%2044.png)
+![image.png](images/image-44.png)
 
-![image.png](image%2045.png)
+![image.png](images/image-45.png)
 
 Gray world hypothesis weight $w_{gwh}$ =0.5
 
-![image.png](image%2046.png)
+![image.png](images/image-46.png)
 
-![image.png](image%2047.png)
+![image.png](images/image-47.png)
 
 Gray world hypothesis weight $w_{gwh}$ =0
 
-![image.png](image%2048.png)
+![image.png](images/image-48.png)
 
-![image.png](image%2049.png)
+![image.png](images/image-49.png)
 
 IPhone 16
 
 ![IMG_1499.jpg](IMG_1499.jpg)
 
-![image.png](image%2050.png)
+![image.png](images/image-50.png)
 
 ![iPhone camera’s ISP changes AWB depending on scene and screen touch point ](ezgif-36f2f76e5e27a4ba.gif)
 
@@ -336,7 +336,7 @@ Galaxy A8 star
 
 ![13-1. GalaxyA8_20251215_165452.jpg](13-1._GalaxyA8_20251215_165452.jpg)
 
-![image.png](image%2051.png)
+![image.png](images/image-51.png)
 
 ---
 
@@ -360,31 +360,31 @@ Ultimately, Linear Fitting (Scalar Gains) produced the most robust results for
 
 **1. Independent RGB Non-linear Fitting**
 
-![image.png](image%2052.png)
+![image.png](images/image-52.png)
 
-![24 colorchecker](image%2053.png)
+![24 colorchecker](images/image-53.png)
 
 24 colorchecker
 
-![GWH applied ](image%2054.png)
+![GWH applied ](images/image-54.png)
 
 GWH applied 
 
 **2. G-Channel Linearization with Scalar Gains**
 
-![image.png](image%2055.png)
+![image.png](images/image-55.png)
 
-![image.png](image%2056.png)
+![image.png](images/image-56.png)
 
-![image.png](image%2057.png)
+![image.png](images/image-57.png)
 
 **3. Linear fitting ( y intercept = 0 )**
 
-![image.png](image%2058.png)
+![image.png](images/image-58.png)
 
-![image.png](image%2059.png)
+![image.png](images/image-59.png)
 
-![image.png](image%2060.png)
+![image.png](images/image-60.png)
 
 ---
 
@@ -401,19 +401,19 @@ In Python, these constraints (∑Row=1) can be strictly enforced by using the `
 
 1. **Indoor image before CCM**
 
-![image.png](image%2061.png)
+![image.png](images/image-61.png)
 
 1. **Indoor image after CCM (∑Row≠1)**
 
-![image.png](image%2062.png)
+![image.png](images/image-62.png)
 
-![image.png](image%2063.png)
+![image.png](images/image-63.png)
 
 1. **Indoor image after CCM (∑Row=1)**
 
-![image.png](image%2064.png)
+![image.png](images/image-64.png)
 
-![image.png](image%2065.png)
+![image.png](images/image-65.png)
 
 ---
 
@@ -427,21 +427,21 @@ The lateral color plots illustrate the deviation of red and blue rays relative t
 
 **Reverse telephoto F/3.5 f=6mm, FOV +- 31 deg**
 
-![image.png](image%2066.png)
+![image.png](images/image-66.png)
 
-![Lateral color plot, object at infinity, D 2.72 um at 31 deg field ( 3.62 mm image)](image%2067.png)
+![Lateral color plot, object at infinity, D 2.72 um at 31 deg field ( 3.62 mm image)](images/image-67.png)
 
 Lateral color plot, object at infinity, D 2.72 um at 31 deg field ( 3.62 mm image)
 
-![Lateral color plot, object at 250mm, D 2.97 um at 31 deg field (3.6w mm image)](image%2068.png)
+![Lateral color plot, object at 250mm, D 2.97 um at 31 deg field (3.6w mm image)](images/image-68.png)
 
 Lateral color plot, object at 250mm, D 2.97 um at 31 deg field (3.6w mm image)
 
-![Marginal and chief rays](image%2069.png)
+![Marginal and chief rays](images/image-69.png)
 
 Marginal and chief rays
 
-![Chief rays for red, green, blue rays at image plane](image%2070.png)
+![Chief rays for red, green, blue rays at image plane](images/image-70.png)
 
 Chief rays for red, green, blue rays at image plane
 
@@ -453,33 +453,33 @@ Centroids were calculated for each dot across all three channels. The resulting 
 
 Consequently, the red channel shift remains uncorrected in the current iteration, although correction may be feasible if a specific theoretical design model becomes available. In contrast, the blue channel exhibits a clear, monotonic radial shift consistent with the Zemax simulation. This was modeled using polynomial fitting. During the dewarping stage, each pixel coordinate is transformed according to this fit and remapped using sub-pixel interpolation.
 
-![Dot grid pattern ](image%2071.png)
+![Dot grid pattern ](images/image-71.png)
 
 Dot grid pattern 
 
-![image.png](image%2072.png)
+![image.png](images/image-72.png)
 
-![Red channel center coordiante shift](image%2073.png)
+![Red channel center coordiante shift](images/image-73.png)
 
 Red channel center coordiante shift
 
-![Blue channel center coordiante shift](image%2074.png)
+![Blue channel center coordiante shift](images/image-74.png)
 
 Blue channel center coordiante shift
 
-![Blue channel, radial vector vs. distance from center](image%2075.png)
+![Blue channel, radial vector vs. distance from center](images/image-75.png)
 
 Blue channel, radial vector vs. distance from center
 
-![Blue channel, circumferential vector vs. distance from center](image%2076.png)
+![Blue channel, circumferential vector vs. distance from center](images/image-76.png)
 
 Blue channel, circumferential vector vs. distance from center
 
-![Red channel, radial vector vs. distance from center](image%2077.png)
+![Red channel, radial vector vs. distance from center](images/image-77.png)
 
 Red channel, radial vector vs. distance from center
 
-![Red channel, circumferential vector vs. distance from center](image%2078.png)
+![Red channel, circumferential vector vs. distance from center](images/image-78.png)
 
 Red channel, circumferential vector vs. distance from center
 
@@ -489,27 +489,27 @@ The comparison images demonstrate a significant improvement in image quality fol
 
 **Zoom-in dot grid pattern (left: before LCA correction, right: after LCA correction)**
 
-![image.png](image%2079.png)
+![image.png](images/image-79.png)
 
-![image.png](image%2080.png)
+![image.png](images/image-80.png)
 
 **Outdoor daylight image  (left: before LCA correction, right: after LCA correction)**
 
-![image.png](image%2081.png)
+![image.png](images/image-81.png)
 
-![image.png](image%2082.png)
+![image.png](images/image-82.png)
 
 **Zoom-in outdoor daylight image, right bottom  (left: before LCA correction, right: after LCA correction)**
 
-![image.png](image%2083.png)
+![image.png](images/image-83.png)
 
-![image.png](image%2084.png)
+![image.png](images/image-84.png)
 
 **Zoom-in outdoor daylight image, left top (left: before LCA correction, right: after LCA correction)**
 
-![image.png](image%2085.png)
+![image.png](images/image-85.png)
 
-![image.png](image%2086.png)
+![image.png](images/image-86.png)
 
 ---
 
@@ -527,33 +527,33 @@ In contrast, (1-4-1) and (1-6-1) filters utilize higher center-pixel weighti
 
 **Line grating image without AA filter**
 
-![image.png](image%2087.png)
+![image.png](images/image-87.png)
 
-![image.png](image%2088.png)
+![image.png](images/image-88.png)
 
 **Line grating image with AA filter (1-2-1)**
 
-![image.png](image%2089.png)
+![image.png](images/image-89.png)
 
-![image.png](image%2090.png)
+![image.png](images/image-90.png)
 
-![image.png](image%2091.png)
+![image.png](images/image-91.png)
 
 **Line grating image with AA filter (1-4-1)**
 
-![image.png](image%2092.png)
+![image.png](images/image-92.png)
 
-![image.png](image%2093.png)
+![image.png](images/image-93.png)
 
-![image.png](image%2094.png)
+![image.png](images/image-94.png)
 
 **Line grating image with AA filter (1-6-1)**
 
-![image.png](image%2095.png)
+![image.png](images/image-95.png)
 
-![image.png](image%2096.png)
+![image.png](images/image-96.png)
 
-![image.png](image%2097.png)
+![image.png](images/image-97.png)
 
 ---
 
@@ -565,21 +565,21 @@ In this implementation, a [non-local mean (NLM) filter](https://www.ipol.im/pub/
 
 **Outdoor, night vision, Y channel only**
 
-![cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21](image%2098.png)
+![cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21](images/image-98.png)
 
 cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21
 
-![cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11](image%2099.png)
+![cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11](images/image-99.png)
 
 cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11
 
 **Outdoor, daylight, Y channel only**
 
-![cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21](image%20100.png)
+![cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21](images/image-100.png)
 
 cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21
 
-![cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11](image%20101.png)
+![cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11](images/image-101.png)
 
 cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11
 
@@ -587,35 +587,35 @@ While NLM filtering effectively suppresses noise, the non-ideal nature of the fi
 
 $Y_{sharpened}=Y_{original}+M(|E|)*gain$
 
-![image.png](image%20102.png)
+![image.png](images/image-102.png)
 
 To specifically address 'beading artifacts'—where fine 1–2 pixel structures break into pixelated features due to high-frequency noise amplification—a 3x3 median filter was integrated into the edge processing. This median filter acts as a spatial outlier rejection step, suppressing isolated noise spikes in the edge map while preserving the structural continuity of thin tree branches. The result is a significant enhancement of branch outlines with a marked reduction in granular artifacts
 
 **Edge enhanced without median filter, Outdoor, daylight, Y channel only**
 
-![Edge enhancement without 3x3 median filter](image%20103.png)
+![Edge enhancement without 3x3 median filter](images/image-103.png)
 
 Edge enhancement without 3x3 median filter
 
-![Edge enhancement without 3x3 median filter](image%20104.png)
+![Edge enhancement without 3x3 median filter](images/image-104.png)
 
 Edge enhancement without 3x3 median filter
 
 **Edge enhanced with median filter, Outdoor, daylight, Y channel only**
 
-![Edge enhancement with 3x3 median filter](image%20105.png)
+![Edge enhancement with 3x3 median filter](images/image-105.png)
 
 Edge enhancement with 3x3 median filter
 
-![Edge enhancement with 3x3 median filter](image%20106.png)
+![Edge enhancement with 3x3 median filter](images/image-106.png)
 
 Edge enhancement with 3x3 median filter
 
 **Edge enhanced with median filter, Outdoor, Night vision (Exp 16ms, Gain 6), Y channel only**
 
-![image.png](image%20107.png)
+![image.png](images/image-107.png)
 
-![image.png](image%20108.png)
+![image.png](images/image-108.png)
 
 ---
 
@@ -629,7 +629,7 @@ $C_{out,r} = 0.5+(C_{in,r}-0.5)\times(1-M(|E|))$
 
 $C_{out,b} = 0.5+(C_{in,b}-0.5)\times(1-M(|E|))$
 
-![image.png](image%20102.png)
+![image.png](images/image-102.png)
 
 Where $M(|E|)$ represents the suppression Mask derived from the Luma edge map. Under high-gradient conditions (strong edges), the term $(1-M(|E|))$ approaches 0, effectively desaturating the pixel to neutral gray. Conversely, in low-gradient regions (weak edges), the term approaches 1, preserving the original chromatic integrity.
 
@@ -639,31 +639,31 @@ However, applying these same parameters to an outdoor daylight scene resulted 
 
 **Outdoor night scene**
 
-![Correction for false color spot on vehicle surfaces ](image%20109.png)
+![Correction for false color spot on vehicle surfaces ](images/image-109.png)
 
 Correction for false color spot on vehicle surfaces 
 
-![Before edge-based chroma filtering](image%20110.png)
+![Before edge-based chroma filtering](images/image-110.png)
 
 Before edge-based chroma filtering
 
 **Outdoor day scene**
 
-![After edge-based chroma filtering](image%20111.png)
+![After edge-based chroma filtering](images/image-111.png)
 
 After edge-based chroma filtering
 
-![white halos near yellow sign and utility pole](image%20112.png)
+![white halos near yellow sign and utility pole](images/image-112.png)
 
 white halos near yellow sign and utility pole
 
-![image.png](image%20113.png)
+![image.png](images/image-113.png)
 
-![Before edge-based chroma filtering](image%20114.png)
+![Before edge-based chroma filtering](images/image-114.png)
 
 Before edge-based chroma filtering
 
-![After edge-based chroma filtering](image%20115.png)
+![After edge-based chroma filtering](images/image-115.png)
 
 After edge-based chroma filtering
 
@@ -695,13 +695,13 @@ $O_{input}(i,j)$: Fixed pattern offset generated before amplification
 
 $O_{output}(i,j)$: Black level, used to prevent signal clipping during Analog-to-Digital Conversion (ADC).
 
-![mean pixel value (ADU) of 100-frame average dark images w.r.t. gain and exposure time](image%20116.png)
+![mean pixel value (ADU) of 100-frame average dark images w.r.t. gain and exposure time](images/image-116.png)
 
 mean pixel value (ADU) of 100-frame average dark images w.r.t. gain and exposure time
 
 Images below are 100x100 pixels cropped images showing linear intensity increment with respect to gain and exposure time. As we saw in mean pixel value relation, the overall intensity is increased as gain and exposure time increase. But speckle patterns are major correction targets, which are potentially caused by manufacting errors.
 
-![100x100 pixel cropped original dark image with different gains and exposure times ](image%20117.png)
+![100x100 pixel cropped original dark image with different gains and exposure times ](images/image-117.png)
 
 100x100 pixel cropped original dark image with different gains and exposure times 
 
@@ -717,7 +717,7 @@ $I_{FPN}(i,j)≈G⋅O_{input}(i,j)+O_{output}(i,j)$
 
 Plotting intensity versus gain allowed us to extract $O_{input}(i,j)$ as the slope of the linear fit. While most pixels remained near the baseline black level, specific "hot pixels" exhibited significant slopes, identifying them as high-offset outliers.
 
-![Calibration for $O_{input}(i,j)$. The graph shows $I_{FPN}(i,j)=G(i,j)*O_{input}(i,j)+O_{output}(i,j)$ relation because t is only 10us. The slope of linear fit line is $O_{input}(i,j)$](image%20118.png)
+![Calibration for $O_{input}(i,j)$. The graph shows $I_{FPN}(i,j)=G(i,j)*O_{input}(i,j)+O_{output}(i,j)$ relation because t is only 10us. The slope of linear fit line is $O_{input}(i,j)$](images/image-118.png)
 
 Calibration for $O_{input}(i,j)$. The graph shows $I_{FPN}(i,j)=G(i,j)*O_{input}(i,j)+O_{output}(i,j)$ relation because t is only 10us. The slope of linear fit line is $O_{input}(i,j)$
 
@@ -729,7 +729,7 @@ $I_{FPN}(i,j)=(G⋅K)t+O_{output}(i,j)$
 
 The slope of the intensity versus exposure time plot yields the dark current rate K(i,j). This parameter is critical for night vision applications, where long integration times amplify thermal leakage.
 
-![Calibration for k(i,j). The left graph shows $I_{FPN}(i,j)=G(i,j)*[K(i,j)*t]+O_{output}(i,j)$ relation because $O_{output}(i,j)$  is corrected. The slope of linear fit line is K(i,j).](image%20119.png)
+![Calibration for k(i,j). The left graph shows $I_{FPN}(i,j)=G(i,j)*[K(i,j)*t]+O_{output}(i,j)$ relation because $O_{output}(i,j)$  is corrected. The slope of linear fit line is K(i,j).](images/image-119.png)
 
 Calibration for k(i,j). The left graph shows $I_{FPN}(i,j)=G(i,j)*[K(i,j)*t]+O_{output}(i,j)$ relation because $O_{output}(i,j)$  is corrected. The slope of linear fit line is K(i,j).
 
@@ -737,19 +737,19 @@ Calibration for k(i,j). The left graph shows $I_{FPN}(i,j)=G(i,j)*[K(i,j)*t]+O_{
 
 In standard operating conditions, spatial noise is often masked by temporal readout noise. However, in high-gain night vision applications, FPN frequently exceeds the temporal noise floor ($3σ_{temporal}$), appearing as false signals or "speckle." The effectiveness of the proposed correction is demonstrated through histogram analysis. Note that the histogram below shows pixel value distribution from original dark images at gain 8, $O_{input}(i,j)$ corrected images, and $O_{input}(i,j)$ and k(i,j) corrected images and the vertical lines correspond to $3σ_{temporal}$. The effective noise removal can be confirmed with dark images after $O_{input}(i,j)$ and k(i,j) corrected images. The raw dark signal distribution is significantly improved after correcting for $O_{input}$ and K(i,j). Notably, a small population of "impulse noise" remains; these are attributed to pixels reaching the hardware saturation limit, where the linear model no longer applies.
 
-![image.png](image%20120.png)
+![image.png](images/image-120.png)
 
-![100x100 pixel cropped images after $O_{input}(i,j)$ correction](image%20121.png)
+![100x100 pixel cropped images after $O_{input}(i,j)$ correction](images/image-121.png)
 
 100x100 pixel cropped images after $O_{input}(i,j)$ correction
 
-![100x100 pixel cropped images after $O_{input}(i,j)$ and k(i,j) corrected images](image%20122.png)
+![100x100 pixel cropped images after $O_{input}(i,j)$ and k(i,j) corrected images](images/image-122.png)
 
 100x100 pixel cropped images after $O_{input}(i,j)$ and k(i,j) corrected images
 
 Finally, the correction was applied to a representative night vision outdoor scene. The removal of FPN eliminated noticeable impulse noise that would otherwise trigger false detections in chroma filters or computer vision algorithms.
 
-![night vision image (gain 6, exposure time 15ms)](image%20123.png)
+![night vision image (gain 6, exposure time 15ms)](images/image-123.png)
 
 night vision image (gain 6, exposure time 15ms)
 
@@ -775,7 +775,7 @@ Note that the LED monitor-generated calibration image is not ideal since the LED
 
 **Color checker generator** 
 
-![ScreenRecording.gif](docs/camera-isp-development/images/ScreenRecording.gif)
+![ScreenRecording.gif](images/ScreenRecording.gif)
 
 **Dot grid pattern generator** 
 
