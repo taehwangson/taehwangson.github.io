@@ -196,6 +196,9 @@ plugins:
   - jekyll-sitemap
 
 kramdown:
+  math_engine: mathjax
+  math_engine_opts:
+    preview: "none"
   syntax_highlighter_opts:
     block:
       line_numbers: false
