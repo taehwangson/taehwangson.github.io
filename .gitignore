@@ -31,3 +31,4 @@ node_modules
 
 # Used for automated test results and metadata.
 tmp/
+.obsidian/
