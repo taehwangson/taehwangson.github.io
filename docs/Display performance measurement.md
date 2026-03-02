@@ -1,6 +1,7 @@
 ---
 title: Display performance measurement
 layout: default
+comments: true
 nav_order: 1
 ---
 
