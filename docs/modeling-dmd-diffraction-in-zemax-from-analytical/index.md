@@ -19,11 +19,11 @@ The primary objective is to predict the positioning and intensity distribution 
 
 # Analytical Model of DMD Diffraction
 
-## 1. Definitions
+## Definitions
 
 The system is modeled as a 2D reflective blazed grating. The interaction between the incident light and the mirror surface is defined by two governing vector conditions. The system is defined by its periodicity (pitch), mirror geometry, and the tilt angles.
 
-### 1.1 Geometry Constants
+### Geometry Constants
 
 - **Pitch:** $p_x, p_y$
 - **Mirror Size:** $a_x, a_y$ (where $a < p$)
@@ -34,7 +34,7 @@ $$\mathbf{k}_{in}=k\mathbf{\hat{k}}_{in}=\frac{2\pi}{\lambda}\mathbf{\hat{k}}_{i
 
 As a representative example, the TI DMD 7000 series features a pitch ($p$) of 13.68 µm. Assuming a fill factor of 0.96, the mirror width ($a$) is approximately 13.13 µm. While standard operation employs a binary state ( $\theta_t = \pm12^\circ$ ), this model treats the tilt as a continuous variable, $12 ^\circ \leqq \theta_t \leqq 12^\circ$ .This allows the simulation to account for intermediate transition states or specialized beam-steering applications where the mirror position is modulated between the nominal binary landing states.
 
-### 1.2 Fundamental Vector Equations
+### Fundamental Vector Equations
 
 Two governing equations define the DMD mirrors: (1)  grating equation and (2) reflection equation. Here, all DMD mirrors are assumed to have the same tilt angle.
 
@@ -49,7 +49,7 @@ $$\mathbf{k}_{spec} = \mathbf{k}_{in} - 2(\mathbf{k}_{in} \cdot \mathbf{\hat{n}}
 
 ---
 
-## 2. Fraunhofer Diffraction Derivation
+## Fraunhofer Diffraction Derivation
 
 The far-field complex amplitude $E(\mathbf{k}_{out})$ is the Fourier Transform of the total aperture function $A(\mathbf{r})$.
 
@@ -57,7 +57,7 @@ $E( \mathbf{k_{out}} )=∫A(r) e^{(i \mathbf{(k_{in}-k_{out} )r}}) dr=∫A(r) e^
 
 where $A(r)$ is a complex aperture function, $\mathbf{q}=\mathbf{k_{in}-k_{out}}$ and $E(\mathbf{k_{out}} )=\tilde {A}(\mathbf{q})$.
 
-### 2.1 Fraunhofer Approximation
+### Fraunhofer Approximation
 
 A critical consideration in DMD diffraction modeling is the Fraunhofer distance ($L \gg D^2/\lambda)$ . In practice, the effective aperture diameter D is defined by the **incident beam diameter** rather than the physical boundaries of the DMD chip itself.
 
@@ -68,7 +68,7 @@ The distance required to reach the far-field quadratically with the number of mi
 | **Small Beam** | 1.37 mm               | $\approx 100 \times 100$   | $\approx 20  cm$                  |
 | **Large Beam** | 13.7 mm               | $\approx 1000 \times 1000$ | $\approx 2  m$                    |
 
-### 2.2 The Total Aperture Function
+### The Total Aperture Function
 
 The DMD is modeled as a convolution of a single mirror's profile $P(\mathbf{r})$ with a finite 2D Dirac comb $\Lambda(\mathbf{r})$:
 
@@ -77,7 +77,7 @@ $A(\mathbf{r}) = P(\mathbf{r}) * \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} \delta(\mathb
 where 
 $\mathbf{R}_{mn} = (mp_x, np_y).$
 
-### 2.3 The Lattice Factor
+### The Lattice Factor
 
 The Fourier Transform of the Dirac comb $\tilde{\Lambda}(\mathbf{q})$ yields the interference term. For $M, N$ mirrors:
 
@@ -91,7 +91,7 @@ Assuming that we have enough mirrors ($M,N → \infty$), $\tilde{\Lambda}(\mathb
 
  $\tilde{\Lambda}(\mathbf{q}) = \frac{(2\pi)^2}{p_x p_y} \sum_{m,n} \delta\left(q_x - \frac{2\pi m}{p_x}\right) \delta\left(q_y - \frac{2\pi n}{p_y}\right)$
 
-### 2.4 The Single Mirror Factor (Diffraction Envelope)
+### The Single Mirror Factor (Diffraction Envelope)
 
 The tilted mirror introduces a phase ramp $\phi(x,y)$. Given the mirror normal $\mathbf{\hat{n}}$for a diagonal tilt:
 
@@ -105,7 +105,7 @@ The single mirror transform is:
 
 $$$\tilde{P}(\mathbf{q}) = a_x a_y \text{sinc}\left( \frac{a_x (q_x - q_{blaze,x})}{2} \right) \text{sinc}\left( \frac{a_y (q_y - q_{blaze,y})}{2} \right)$$
 
-### 2.5 Total Intensity Distribution
+### Total Intensity Distribution
 
 The final intensity $I(\mathbf{q})$ is the product of the single-mirror envelope and the lattice factor:
 
@@ -121,7 +121,7 @@ $I(\mathbf{q}) =  a_x a_y \text{sinc}\left( \frac{a_x (q_x - q_{blaze,x})}{2} \r
 
 ---
 
-## 3. Python Implementation
+## Python Implementation
 
 Many diffraction grating papers are based on far-field projections because the diffraction angle calculation is a major concern.  Instead, projection onto a plane perpendicular to $k_{spec}$ and real coordinates are used for python implementation to match results with Zemax later. 
 
@@ -138,13 +138,13 @@ The simulation provides five degrees of freedom via interactive sliders, enablin
 
 ![image.png](images/image.png)
 
-### 3.1 Python interactive diffraction simulation
+### Python interactive diffraction simulation
 
 To validate the analytical model, the total intensity distribution $I(q)$ was implemented in a Python-based interactive simulation. This tool allows for real-time visualization of how the diffraction pattern evolves under different physical and geometric constraints. TI DMD 7000 spec was employed.
 
 [https://dmd-simulation-jw3t5pa5p6y7aqvsocwrzn.streamlit.app/?embed=true](https://dmd-simulation-jw3t5pa5p6y7aqvsocwrzn.streamlit.app/?embed=true)
 
-### 3.2  Python interactive phase matching condition
+### Python interactive phase matching condition
 
 To illustrate the physical peak of diffraction efficiency, the simulation visualizes the Phase Matching Condition:
 
@@ -159,7 +159,7 @@ By adjusting the sliders, the user can observe how the energy envelope (the blue
 
 [https://dmd-simulation-mlbegwhffsk9tjetaaaqz5.streamlit.app/?embed=true](https://dmd-simulation-mlbegwhffsk9tjetaaaqz5.streamlit.app/?embed=true)
 
-## 4. Zemax DLL generation
+## Zemax DLL generation
 
 A DMD can be modeled in Zemax Sequential Mode for incoherent applications, such as DLP projectors. In this configuration, the DMD acts as a reflective grating where individual diffraction orders are isolated using the Multi-Configuration Editor. This method uses a geometrical ray trace and ignores interference, making it ideal for standard lens design and throughput studies.
 
@@ -184,25 +184,25 @@ As the comparison table suggests, the Diffractive DLL produces an unnatural, c
 
 The Full Analytical scattering implementation is technically the most accurate model, as it accounts for the finite size of the mirror array and the light distribution between orders. However, the simulation speed is significantly slower due to the nature of the Monte Carlo sampling. This mode is not recommended for general design work. It should be used only for specialized cases like stray light or contrast analysis.
 
-### **4.1 Diffractive DLL**
+### Diffractive DLL
 
 [Diff2D_DMD_250216_v2.dll](Diff2D_DMD_250216_v2.dll)
 
 ![image.png](images/image-1.png)
 
-### **4.2 Scattering DLL (Delta Approximation)**
+### Scattering DLL (Delta Approximation)
 
 [Scattering_DMD_250217_v3.dll](Scattering_DMD_250217_v3.dll)
 
 ![image.png](images/image-2.png)
 
-### **4.3 Scattering DLL (Full Analytical Model)**
+### Scattering DLL (Full Analytical Model)
 
 [Scattering_DMD_analytical_250218_v2.dll](Scattering_DMD_analytical_250218_v2.dll)
 
 ![image.png](images/image-3.png)
 
-### 4.4 Reference Python Result
+### Reference Python Result
 
 ![image.png](images/image-4.png)
 
@@ -216,9 +216,8 @@ A similar derivation was found in some references
 
 References for Zemax implementation 
 
-https://community.zemax.com/dlls-11/simulate-2d-diffraction-grating-using-customized-diffractive-dll-113
-
-https://optics.ansys.com/hc/en-us/articles/42661741799699-Custom-DLLs-in-OpticStudio-An-overview-of-user-defined-surfaces-objects-and-other-DLL-types
+[Simulate 2D diffraction grating using customized diffractive DLL](https://community.zemax.com/dlls-11/simulate-2d-diffraction-grating-using-customized-diffractive-dll-113)
+[Custom DLLs in OpticStudio: An overview of user-defined surfaces, objects, and other DLL types](https://optics.ansys.com/hc/en-us/articles/42661741799699-Custom-DLLs-in-OpticStudio-An-overview-of-user-defined-surfaces-objects-and-other-DLL-types)
 
 References for DMD diffractive beam steering
 

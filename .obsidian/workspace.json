@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b7bca7e5505a7fef",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "docs/modeling-dmd-diffraction-in-zemax-from-analytical/images/image-6.png"
-              },
-              "icon": "lucide-image",
-              "title": "image-6"
-            }
-          },
-          {
             "id": "c945a1552c00969e",
             "type": "leaf",
             "state": {
@@ -33,8 +21,7 @@
               "title": "index"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
