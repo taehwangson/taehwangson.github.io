@@ -8,8 +8,15 @@ nav_order: 6
 
 
 # Display performance measurement
-
+{: .no_toc }
 by Taehwang Son
+
+
+## Table of Contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 
 ## 1. Goal
