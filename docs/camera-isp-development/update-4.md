@@ -42,17 +42,17 @@ Gray world hypothesis weight $w_{gwh}$ =0
 
 IPhone 16
 
-![IMG_1499.jpg](IMG_1499.jpg)
+![](IMG_1499.jpg)
 
 ![image.png](images/image-50.png)
 
-![iPhone camera’s ISP changes AWB depending on scene and screen touch point ](ezgif-36f2f76e5e27a4ba.gif)
+![](ezgif-36f2f76e5e27a4ba.gif)
 
 iPhone camera’s ISP changes AWB depending on scene and screen touch point 
 
 Galaxy A8 star
 
-![13-1. GalaxyA8_20251215_165452.jpg](13-1._GalaxyA8_20251215_165452.jpg)
+![](13-1._GalaxyA8_20251215_165452.jpg)
 
 ![image.png](images/image-51.png)
 
