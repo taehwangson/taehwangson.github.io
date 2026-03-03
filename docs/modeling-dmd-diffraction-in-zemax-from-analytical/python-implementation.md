@@ -3,7 +3,7 @@ title: Python Implementation
 layout: default
 comments: true
 nav_order: 2
-parent: Modeling DMD Diffraction in Zemax: From Analytical Theory to Implementation
+parent: Modeling DMD Diffraction in Zemax - From Analytical Theory to Implementation
 ---
 
 # Python Implementation

@@ -1,5 +1,5 @@
 ---
-title: Modeling DMD Diffraction in Zemax: From Analytical Theory to Implementation
+title: Modeling DMD Diffraction in Zemax - From Analytical Theory to Implementation
 layout: default
 comments: true
 nav_order: 4

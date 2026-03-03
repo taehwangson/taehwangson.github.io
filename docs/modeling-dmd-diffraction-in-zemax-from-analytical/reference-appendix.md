@@ -3,7 +3,7 @@ title: Reference and appendix
 layout: default
 comments: true
 nav_order: 4
-parent: Modeling DMD Diffraction in Zemax: From Analytical Theory to Implementation
+parent: Modeling DMD Diffraction in Zemax - From Analytical Theory to Implementation
 ---
 
 # Reference
