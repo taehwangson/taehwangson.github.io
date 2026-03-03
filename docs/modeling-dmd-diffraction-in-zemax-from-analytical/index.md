@@ -20,7 +20,7 @@ The system is modeled as a 2D reflective blazed grating. The interaction between
 - **Mirror Size:** $a_x, a_y$ (where $a < p$)
 - **Tilt Angle:** $\theta_t$
 - **Wavelength:** $\lambda$
-- **Incident Wavevector:**$\mathbf{k}_{in}=k\mathbf{\hat{k}}_{in}=\frac{2\pi}{\lambda}\mathbf{\hat{k}}_{in}$
+- **Incident Wavevector:** $\mathbf{k}_{in}=k\mathbf{\hat{k}}_{in}=\frac{2\pi}{\lambda}\mathbf{\hat{k}}_{in}$
 
 As a representative example, the TI DMD 7000 series features a pitch ($p$) of 13.68 µm. Assuming a fill factor of 0.96, the mirror width ($a$) is approximately 13.13 µm. While standard operation employs a binary state ( $\theta_t = \pm12^\circ$ ), this model treats the tilt as a continuous variable, $12 ^\circ \leqq \theta_t \leqq 12^\circ$ .This allows the simulation to account for intermediate transition states or specialized beam-steering applications where the mirror position is modulated between the nominal binary landing states.
 
@@ -31,11 +31,11 @@ Two governing equations define the DMD mirrors: (1)  grating equation and (2) re
 - **The Grating Equation**
 The periodicity of the DMD array $(p_x,p_y)$ dictates the discrete angles where constructive interference occurs. The outgoing wavevector $k_{out}$ must satisfy:
 
-$\mathbf{k}_{out,\parallel} = \mathbf{k}_{in,\parallel} + \mathbf{G}_{mn}, \quad \text{where } \mathbf{G}_{mn} = \left( \frac{2\pi m}{p_x}, \frac{2\pi n}{p_y} \right)$
+$$\mathbf{k}_{out,\parallel} = \mathbf{k}_{in,\parallel} + \mathbf{G}_{mn}, \quad \text{where } \mathbf{G}_{mn} = \left( \frac{2\pi m}{p_x}, \frac{2\pi n}{p_y} \right)$$
 - **The Reflection Equation**
 The tilt angle  $θ_t$ determines the norma vectorl $\hat n$ of the mirror. This normal defines the **specular reflection vector** kspec, which serves as the center of the diffraction envelope:
 
-$\mathbf{k}_{spec} = \mathbf{k}_{in} - 2(\mathbf{k}_{in} \cdot \mathbf{\hat{n}}) \mathbf{\hat{n}}$
+$$\mathbf{k}_{spec} = \mathbf{k}_{in} - 2(\mathbf{k}_{in} \cdot \mathbf{\hat{n}}) \mathbf{\hat{n}}$$
 
 ---
 
@@ -75,7 +75,7 @@ $\tilde{\Lambda}(\mathbf{q}) = \sum_{m=0}^{M-1} e^{-i q_x m p_x} \sum_{n=0}^{N-1
 
 Using the geometric series identity, the resulting intensity contribution is:
 
-$|\tilde{\Lambda}(\mathbf{q})|^2 = \left| \frac{\sin(M q_x p_x / 2)}{\sin(q_x p_x / 2)} \right|^2 \left| \frac{\sin(N q_y p_y / 2)}{\sin(q_y p_y / 2)} \right|^2$
+$\vert\tilde{\Lambda}(\mathbf{q})\vert^2 = \left| \frac{\sin(M q_x p_x / 2)}{\sin(q_x p_x / 2)} \right|^2 \left| \frac{\sin(N q_y p_y / 2)}{\sin(q_y p_y / 2)} \right|^2$
 
 Assuming that we have enough mirrors ($M,N → \infty$), $\tilde{\Lambda}(\mathbf{q})$ can be approximated to delta comb}
 
@@ -85,23 +85,23 @@ Assuming that we have enough mirrors ($M,N → \infty$), $\tilde{\Lambda}(\mathb
 
 The tilted mirror introduces a phase ramp $\phi(x,y)$. Given the mirror normal $\mathbf{\hat{n}}$for a diagonal tilt:
 
-$\mathbf{\hat{n}} = \left[ \frac{\sin \theta_t}{\sqrt{2}}, \frac{\sin \theta_t}{\sqrt{2}}, \cos \theta_t \right]$
+$$\mathbf{\hat{n}} = \left[ \frac{\sin \theta_t}{\sqrt{2}}, \frac{\sin \theta_t}{\sqrt{2}}, \cos \theta_t \right]$$
 
 The phase gradient results in a shifted sinc envelope. We define the blaze vector $\mathbf{q}_{blaze}$ as the momentum transfer at specular reflection:
 
-$\mathbf{q}_{blaze} = - 2(\mathbf{k}_{in} \cdot \mathbf{\hat{n}}) \mathbf{\hat{n}}$
+$$\mathbf{q}_{blaze} = - 2(\mathbf{k}_{in} \cdot \mathbf{\hat{n}}) \mathbf{\hat{n}}$$
 
 The single mirror transform is:
 
-$\tilde{P}(\mathbf{q}) = a_x a_y \text{sinc}\left( \frac{a_x (q_x - q_{blaze,x})}{2} \right) \text{sinc}\left( \frac{a_y (q_y - q_{blaze,y})}{2} \right)$
+$$$\tilde{P}(\mathbf{q}) = a_x a_y \text{sinc}\left( \frac{a_x (q_x - q_{blaze,x})}{2} \right) \text{sinc}\left( \frac{a_y (q_y - q_{blaze,y})}{2} \right)$$
 
 ### 2.5 Total Intensity Distribution
 
 The final intensity $I(\mathbf{q})$ is the product of the single-mirror envelope and the lattice factor:
 
-$I(\mathbf{q}) = {|\tilde{P}(\mathbf{q})|^2} ({\text{Envelope}}) \times {|\tilde{\Lambda}(\mathbf{q})|^2} ({\text{Lattice Factor}})$
+$I(\mathbf{q}) = {\vert\tilde{P}(\mathbf{q})\vert^2} ({\text{Envelope}}) \times {\vert\tilde{\Lambda}(\mathbf{q})\vert^2} ({\text{Lattice Factor}})$
 
-$I(\mathbf{q}) =  a_x a_y \text{sinc}\left( \frac{a_x (q_x - q_{blaze,x})}{2} \right) \text{sinc}\left( \frac{a_y (q_y - q_{blaze,y})}{2} \right) \times | \frac{\sin(M q_x p_x / 2)}{\sin(q_x p_x / 2)} |^2 | \frac{\sin(N q_y p_y / 2)}{\sin(q_y p_y / 2)} |^2$
+$I(\mathbf{q}) =  a_x a_y \text{sinc}\left( \frac{a_x (q_x - q_{blaze,x})}{2} \right) \text{sinc}\left( \frac{a_y (q_y - q_{blaze,y})}{2} \right) \times \vert \frac{\sin(M q_x p_x / 2)}{\sin(q_x p_x / 2)} \vert^2 \vert \frac{\sin(N q_y p_y / 2)}{\sin(q_y p_y / 2)} \vert^2$
  
 
  Physical Interpretation
@@ -142,7 +142,7 @@ To illustrate the physical peak of diffraction efficiency, the simulation visual
 
 The implementation distinguishes between two variables:
 
-1. **The Lattice (G*mn*):** Represented by red dots, these fixed points define the discrete angles where constructive interference is possible based on the grating equation: $*k_{out,∥}=k_{in,∥}+2π/p(m,n)*$.
+1. **The Lattice (G*mn*):** Represented by red dots, these fixed points define the discrete angles where constructive interference is possible based on the grating equation: $k_{out,\parallel}=k_{in,\parallel}+2\pi/p(m,n)$ .
 2. **The Blaze Center (q*blaze*):** Represented by the blue dot, this tracks the specular reflection direction: **$k_{spec}=k_{in}−2(k_{in}⋅\hat {n}) \hat {n}$**
 
 By adjusting the sliders, the user can observe how the energy envelope (the blue dot) shifts across the stationary grating orders. Maximum efficiency is reached when the blue dot overlaps with a red dot, satisfying the phase-matching condition for a specific (*m*,*n*) order.
