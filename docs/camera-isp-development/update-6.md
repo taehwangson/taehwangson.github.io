@@ -1,5 +1,5 @@
 ---
-title: Update 6 - Color correction matrix (CCM) revisitCompensation
+title: Update 6 - Color correction matrix (CCM) revisit
 layout: default
 comments: true
 nav_order: 6
