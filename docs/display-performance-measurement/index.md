@@ -19,7 +19,7 @@ by Taehwang Son
 {:toc}
 
 
-## 1. Goal
+## Goal
 
 - Accurately compute **CIE 1931 XYZ tristimulus values** from a monitor’s display using spectral measurements and the **CIE 1931 2° standard observer** color matching functions.
 - Evaluate the monitor’s **chromaticity accuracy** by comparing the measured chromaticities of ColorChecker patches against known **sRGB reference values**.
@@ -29,7 +29,7 @@ by Taehwang Son
 
 ---
 
-## **2. Materials and methods**
+## Materials and methods**
 
 - **Spectral Power Distribution (SPD) Measurement:**
     
@@ -52,13 +52,13 @@ by Taehwang Son
 
 Multimode fiber end with a diffuser
 
-![24 Color checker measurement with multimode fiber](images/image.png)
+![24 Color checker measurement with multimode fiber](docs/display-performance-measurement/images/image.png)
 
 24 Color checker measurement with multimode fiber
 
 ---
 
-![Raw data acquisition using Ocean Optics USB spectrometer ](images/image-1.png)
+![Raw data acquisition using Ocean Optics USB spectrometer ](docs/display-performance-measurement/images/image-1.png)
 
 Raw data acquisition using Ocean Optics USB spectrometer 
 
@@ -66,7 +66,7 @@ Raw data acquisition using Ocean Optics USB spectrometer
 
 The XYZ values are computed by integrating the measured Spectral Power Distribution (SPD) with the CIE 1931 2° Standard Observer color matching functions (CMFs) across the visible wavelength range
 
-![image.png](images/image-2.png)
+![image.png](docs/display-performance-measurement/images/image-2.png)
 
 X = ∑ S(λ) · x̄(λ) · Δλ
 
@@ -122,29 +122,29 @@ $b^* = 200[(\frac{Y}{Y_n})^{1/3} - \frac{Z}{Z_n})^{1/3}]$
 
 ---
 
-## 3. Results
+## Results
 
-### a) CIE 1931 xy chromaticity diagram
+### CIE 1931 xy chromaticity diagram
 
 ![Dell P2715Q monitor xy chromaticity ](images/1dd97da1-0c77-44c7-a95a-7aca922c7f82.png)
 
 Dell P2715Q monitor xy chromaticity 
 
-![image.png](images/image-3.png)
+![image.png](docs/display-performance-measurement/images/image-3.png)
 
 Reference data [Wikipedia: Color Checker](https://en.wikipedia.org/wiki/ColorChecker)
 
 The x, y chromaticities of the 24 ColorChecker patches were measured. Display color performance is often evaluated using $\Delta {E_{a b}}^{\ast}$ instead of directly comparing xy coordinates. This is because color spaces like CIELUV or CIELAB offer improved perceptual uniformity, where Euclidean distance corresponds more closely to perceived color differences. Therefore, the measured xy coordinates must be converted into the CIELUV space for this analysis [reference]. The calculation of $\Delta {E_{a b}}^*$ will be discussed in Sec. 3-c).
 
-![image.png](images/image-4.png)
+![image.png](docs/display-performance-measurement/images/image-4.png)
 
-![image.png](images/image-5.png)
+![image.png](docs/display-performance-measurement/images/image-5.png)
 
 Experimentally acquired x, y and reference x, y values are plotted with a y = x line. Both x and y values match well with reference values, and $R^2$ values were calculated to be > 0.99
 
-### b) Luminance and RGB value relationship
+### Luminance and RGB value relationship
 
-![image.png](images/image-6.png)
+![image.png](docs/display-performance-measurement/images/image-6.png)
 
 The monitors I measured have an sRGB color space, meaning the luminance response follows the sRGB electro-optical transfer function (EOTF). This function is characterized by a linear segment at low brightness levels (to avoid harsh banding near black) and a power-law (gamma) segment for mid and high brightness levels, approximating a gamma of about 2.2 for most of the range [2]. The following equation is used to decode (linearize) sRGB pixel values into linear RGB values:
 
@@ -162,9 +162,9 @@ $Y = 0.2126R+0.7152G+0.0722B$
 
 Note that the “White” patch (Patch 19) was used for luminance calibration. The data from patches 19–24 were plotted together with the previously mentioned sRGB EOTF, as well as the gamma curves $Y={C_{sRGB}}^{2.2}$ and  $Y={C_{sRGB}}^{2.0}$. The measured luminance values for patches 20–23 were noticeably higher than the sRGB EOTF and gamma 2.2 reference, but closely followed the $Y={C_{sRGB}}^{2.0}$curve. This strongly suggests that the Dell P2715Q may not strictly follow gamma 2.2 or the sRGB EOTF. It is  known that some consumer monitors intentionally adjust their gamma curves to make midtones appear brighter or to compensate for panel characteristics and typical viewing conditions [ref]. Additionally, the monitor’s “factory reset” or “standard” mode may not be intended for accurate color representation.
 
-### c) CIE 1976 u'v' chromaticity  diagram
+### CIE 1976 u'v' chromaticity  diagram
 
-![Dell P2715Q monitor u’v’ chromaticity ](images/image-7.png)
+![Dell P2715Q monitor u’v’ chromaticity ](docs/display-performance-measurement/images/image-7.png)
 
 Dell P2715Q monitor u’v’ chromaticity 
 
@@ -180,7 +180,7 @@ Second monitor XYZ values were transformed using obtained M and coverted to LAB 
 
 The other observation could be comparsion between the first and second monitor. $\Delta {E_{a b}}^*$ from the two monitors was 1.27, which is also below the manufacturer specification. It showed that uncalibrated spectrometer can also be used for display performance test.
 
-### d) sRGB Gamut coverage
+### sRGB Gamut coverage
 
 ![image.png](images/image-8.png)
 
@@ -192,9 +192,9 @@ $Coverage (\%) = \frac{Area(intersection)}{Area(sRGB)}\times 100$
 
 The calculated sRGB coverage was 99.85%, which exceeds the manufacturer’s specification of 99%. This suggests the display is highly accurate in reproducing sRGB colors.
 
-## 4. Challenges and Limitations
+## Challenges and Limitations
 
-### a) Lack of 24-color checker images
+### Lack of 24-color checker images
 
 I found [a PDF version of the color checker](https://en.wikipedia.org/wiki/File:Color_Checker.pdf), but I realized that the RGB values for the 21 Neutral 6.5 position are incorrect. The 21st position is darker than the 22nd position.
 
@@ -202,7 +202,7 @@ Using Python Dash, I made a simple GUI-based application for generating color ch
 
 ![ScreenRecording.gif](images/ScreenRecording.gif)
 
-### b) Color Correction Matrix (CCM)
+### Color Correction Matrix (CCM)
 
 To compute accurate tristimulus values, the spectral power distribution (SPD) should ideally be expressed in units of radiance (W·sr⁻¹·m⁻²·nm⁻¹) or at least in relative radiometric terms. However, in this experiment, an uncalibrated spectrometer was used. As a result, the raw spectral data may be distorted by the sensor's spectral sensitivity or response function, and therefore may not accurately represent true radiance, even if some basic compensation steps were applied. To mitigate these spectral distortions and map the measured data to perceptually accurate color values, a color correction matrix (CCM) is required [1].
 
@@ -226,7 +226,7 @@ Where:
 
 ---
 
-## (5) References
+## References
 
 [1] "Digital Color Management: Encoding Solutions," Second Edition, by Edward J. Giorgianni et al.
 
