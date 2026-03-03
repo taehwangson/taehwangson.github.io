@@ -22,6 +22,7 @@ layout: table_wrappers
       {% include components/breadcrumbs.html %}
       <div id="main-content" class="main-content">
         <main>
+
           {% if site.heading_anchors != false %}
             {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
           {% else %}
@@ -31,6 +32,28 @@ layout: table_wrappers
           {% if page.has_toc != false %}
             {% include components/children_nav.html %}
           {% endif %}
+          
+          {% if page.comments %}
+            <hr>
+            <section id="comments">
+              <h2>Comments</h2>
+              <script src="https://giscus.app/client.js"
+                data-repo="taehwangson/taehwangson.github.io"
+                data-repo-id="R_kgDORMXysw"
+                data-category="General"
+                data-category-id="DIC_kwDORMXys84C3idN"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="preferred_color_scheme"
+                data-lang="en"
+                crossorigin="anonymous"
+                async>
+              </script>
+            </section>
+          {% endif %} 
         </main>
         {% include components/footer.html %}
       </div>
