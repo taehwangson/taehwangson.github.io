@@ -16,7 +16,7 @@ $Gain_{R,adjusted}= 1+(Gain_R -1)*w_{gwh}$
 
 $Gain_{B,adjusted}= 1+(Gain_B -1)*w_{gwh}$   
 
-![Ref: [egansign.com](images/image-43.png)
+![image-43](images/image-43.png)
 
 Ref: [egansign.com](http://egansign.com/)
 
