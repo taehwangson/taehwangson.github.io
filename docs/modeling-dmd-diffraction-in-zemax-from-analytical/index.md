@@ -129,7 +129,7 @@ $I(\mathbf{q}) =  a_x a_y \text{sinc}\left( \frac{a_x (q_x - q_{blaze,x})}{2} \r
 
 ---
 
-## Python Implementation
+# Python Implementation
 
 Many diffraction grating papers are based on far-field projections because the diffraction angle calculation is a major concern.  Instead, projection onto a plane perpendicular to $k_{spec}$ and real coordinates are used for python implementation to match results with Zemax later. 
 
@@ -146,13 +146,13 @@ The simulation provides five degrees of freedom via interactive sliders, enablin
 
 ![image.png](images/image.png)
 
-### Python interactive diffraction simulation
+## Python interactive diffraction simulation
 
 To validate the analytical model, the total intensity distribution $I(q)$ was implemented in a Python-based interactive simulation. This tool allows for real-time visualization of how the diffraction pattern evolves under different physical and geometric constraints. TI DMD 7000 spec was employed.
 
 [https://dmd-simulation-jw3t5pa5p6y7aqvsocwrzn.streamlit.app/?embed=true](https://dmd-simulation-jw3t5pa5p6y7aqvsocwrzn.streamlit.app/?embed=true)
 
-### Python interactive phase matching condition
+## Python interactive phase matching condition
 
 To illustrate the physical peak of diffraction efficiency, the simulation visualizes the Phase Matching Condition:
 
@@ -167,7 +167,7 @@ By adjusting the sliders, the user can observe how the energy envelope (the blue
 
 [https://dmd-simulation-mlbegwhffsk9tjetaaaqz5.streamlit.app/?embed=true](https://dmd-simulation-mlbegwhffsk9tjetaaaqz5.streamlit.app/?embed=true)
 
-## Zemax DLL generation
+# Zemax DLL generation
 
 A DMD can be modeled in Zemax Sequential Mode for incoherent applications, such as DLP projectors. In this configuration, the DMD acts as a reflective grating where individual diffraction orders are isolated using the Multi-Configuration Editor. This method uses a geometrical ray trace and ignores interference, making it ideal for standard lens design and throughput studies.
 
@@ -192,29 +192,29 @@ As the comparison table suggests, the Diffractive DLL produces an unnatural, c
 
 The Full Analytical scattering implementation is technically the most accurate model, as it accounts for the finite size of the mirror array and the light distribution between orders. However, the simulation speed is significantly slower due to the nature of the Monte Carlo sampling. This mode is not recommended for general design work. It should be used only for specialized cases like stray light or contrast analysis.
 
-### Diffractive DLL
+## Diffractive DLL
 
 [Diff2D_DMD_250216_v2.dll](Diff2D_DMD_250216_v2.dll)
 
 ![image.png](images/image-1.png)
 
-### Scattering DLL (Delta Approximation)
+## Scattering DLL (Delta Approximation)
 
 [Scattering_DMD_250217_v3.dll](Scattering_DMD_250217_v3.dll)
 
 ![image.png](images/image-2.png)
 
-### Scattering DLL (Full Analytical Model)
+## Scattering DLL (Full Analytical Model)
 
 [Scattering_DMD_analytical_250218_v2.dll](Scattering_DMD_analytical_250218_v2.dll)
 
 ![image.png](images/image-3.png)
 
-### Reference Python Result
+## Reference Python Result
 
 ![image.png](images/image-4.png)
 
-## Reference
+# Reference
 
 A similar derivation was found in some references
 
@@ -233,13 +233,13 @@ References for DMD diffractive beam steering
 - J. Chan et al., "Flash and point-and-shoot hybrid lidar by DMD-based solid-state diffractive beam and image steering," Opt. Express 33, 19650-19663 (2025)
 - Nero, Gregory, et al. "Two-dimensional solid-state diffractive beam steering by digital micromirror devices." Emerging Digital Micromirror Device Based Systems and Applications XVI. Vol. 12900. SPIE, 2024.
 
-## **Appendix**
+# Appendix
 
-### 1. Derivation of Lattice Factor
+## Derivation of Lattice Factor
 
 ![image.png](images/image-5.png)
 
-### 2. Derivation of Single Mirror Factor
+## Derivation of Single Mirror Factor
 
 ![image.png](images/image-6.png)
 
