@@ -29,7 +29,7 @@ by Taehwang Son
 
 ---
 
-## Materials and methods**
+## Materials and methods
 
 - **Spectral Power Distribution (SPD) Measurement:**
     
