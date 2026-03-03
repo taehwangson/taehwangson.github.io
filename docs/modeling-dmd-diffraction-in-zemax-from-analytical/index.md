@@ -1,6 +1,15 @@
 # Modeling DMD Diffraction in Zemax: From Analytical Theory to Implementation
+{: .no_toc }
 
-Taehwang Son                                                                                   Last updated: 2026.02.18.
+Taehwang Son 
+<br> Last updated: 2026.02.18.
+
+
+## Table of Contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 This article outlines the analytical derivation and Zemax implementation of a Digital Micromirror Device (DMD) diffraction model. For the scope of this derivation, we assume an operation mode where all micromirrors are synchronized in a uniform tilt state.
 
