@@ -3,7 +3,7 @@ title: Zemax DLL generation
 layout: default
 comments: true
 nav_order: 3
-parent: Modeling DMD Diffraction in Zemax - From Analytical Theory to Implementation
+parent: Modeling DMD Diffraction in Zemax
 ---
 
 # Zemax DLL generation
