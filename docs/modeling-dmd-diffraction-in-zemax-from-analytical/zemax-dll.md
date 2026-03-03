@@ -1,5 +1,5 @@
 ---
-title: Analytical Model of DMD Diffraction
+title: Zemax DLL generation
 layout: default
 comments: true
 nav_order: 3
