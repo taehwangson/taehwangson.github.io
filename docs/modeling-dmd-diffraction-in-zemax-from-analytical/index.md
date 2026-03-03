@@ -29,7 +29,8 @@ The system is modeled as a 2D reflective blazed grating. The interaction between
 - **Mirror Size:** $a_x, a_y$ (where $a < p$)
 - **Tilt Angle:** $\theta_t$
 - **Wavelength:** $\lambda$
-- **Incident Wavevector:** ${\mathbf{k}_{in}}={k\mathbf{\hat{k}}_{in}}={\frac{2\pi}{\lambda}\mathbf{\hat{k}}_{in}}$
+- **Incident Wavevector:** 
+$$\mathbf{k}_{in}=k\mathbf{\hat{k}}_{in}=\frac{2\pi}{\lambda}\mathbf{\hat{k}}_{in}$$
 
 As a representative example, the TI DMD 7000 series features a pitch ($p$) of 13.68 µm. Assuming a fill factor of 0.96, the mirror width ($a$) is approximately 13.13 µm. While standard operation employs a binary state ( $\theta_t = \pm12^\circ$ ), this model treats the tilt as a continuous variable, $12 ^\circ \leqq \theta_t \leqq 12^\circ$ .This allows the simulation to account for intermediate transition states or specialized beam-steering applications where the mirror position is modulated between the nominal binary landing states.
 
