@@ -3,22 +3,23 @@ title: Camera ISP development
 layout: default
 comments: true
 nav_order: 5
+has_children: true
 ---
 
 # Camera ISP development
-{: .no_toc }
+<!-- {: .no_toc } -->
 Updated on Jan. 20, 2025, Taehwang Son
 
 
-## Table of Contents
+<!-- ## Table of Contents
 {: .no_toc .text-delta }
 
 1. TOC
-{:toc}
+{:toc} -->
 
 ## Camera spec
 
-![Camera used in the test](docs/camera-isp-development/images/image.png)
+![Camera used in the test](images/image.png)
 Camera used in the test
 
 
@@ -34,7 +35,7 @@ Max angular FOV +-54 deg. With the sensor, Angular FOV = +- 48 deg, Wide angle, 
 
 Black level was acquired by capturing an image with the sensor capped (no lens) using a short exposure time (100μs). Average pixel intensity was calculated to determine the black level. The black level is 8DN.
 
-![Black level test data](docs/camera-isp-development/images/image-1.png)
+![Black level test data](images/image-1.png)
 
 Black level test data
 
@@ -44,9 +45,9 @@ Black level test data
 
 The lens shading correction calibration image was captured using a white monitor screen to simulate uniform illumination. For each color channel (R, G1, G2, B), the image was Gaussian-blurred and normalized so that maximum values remained unchanged by LSC. After applying LSC, the image became flat. The gain map is not symmetrical. This could be caused by the camera optical axis not being well aligned with the monitor. 
 
-![image.png](docs/camera-isp-development/images/image-2.png)
+![image.png](images/image-2.png)
 
-![Lens shading correction calibration](docs/camera-isp-development/images/image-3.png)
+![Lens shading correction calibration](images/image-3.png)
 
 Lens shading correction calibration
 
@@ -56,7 +57,7 @@ Lens shading correction calibration
 
 Using the image obtained after LSC, white balance was calibrated by applying gains to the blue and red channels to match the average intensity of the green channel. After applying the gains, the greenish raw image became a gray image.
 
-![Calibration white balance data](docs/camera-isp-development/images/image-4.png)
+![Calibration white balance data](images/image-4.png)
 
 Calibration white balance data
 
@@ -66,19 +67,19 @@ Calibration white balance data
 
 To calibrate color, a 24 colorchecker was displayed on an sRGB monitor and imaged with the camera. The [24 colorchecker](https://github.com/taehwangson/ColorChecker-App) was developed previously for monitor color measurement.
 
-![Screenshot of 24 colorchecker ](docs/camera-isp-development/images/image-5.png)
+![Screenshot of 24 colorchecker ](images/image-5.png)
 
 Screenshot of 24 colorchecker 
 
  It is known that the RGB to RGB transformation is done by a 3x3 matrix. The matrix M was calculated using pseudo-inverse ([np.linalg.pinv](https://numpy.org/doc/2.3/reference/generated/numpy.linalg.pinv.html)).
 
-![reference: [Book] Digital Color Management, Appendix H](docs/camera-isp-development/images/image-6.png)
+![reference: [Book] Digital Color Management, Appendix H](images/image-6.png)
 
 reference: [Book] Digital Color Management, Appendix H
 
 After the Color Correction Matrix (CCM) application, the 24 ColorChecker's colors looked realistic and close to the screenshot. RGB data were transformed to the u′v′ color space to assess the calibration quality. In terms of the summation of the distance between the reference points and the measured points, the CCM-applied image showed more than twice the performance improvement
 
-![image.png](docs/camera-isp-development/images/image-7.png)
+![image.png](images/image-7.png)
 
 ![image.png](images/image-8.png)
 
@@ -154,87 +155,8 @@ RGB images are converted into Y′CbCr because human eyes see brightness and co
 
 ---
 
-## Update  1 - Green color on peripheral pixels
 
-**1. Problem statement**
 
-After color correction, the peripheral pixel color is shifted to green. Especially the darker area is noticeably greenish. It is more obvious after CCM. CCM matrix shifts the green-ish peripheral more green tone.
-
-![image.png](images/image-20.png)
-
----
-
-**2. Test with the color checker image**
-
-The same ISP pipeline was used for the 24 colorchecker target. The CCM application makes color patches more vivid, but it causes a greenish image on gray color pixels.
-
-- 24 Colorcheck image CCM application
-
-![image.png](images/image-21.png)
-
----
-
-**3. Test with LSC calibration image**
-
-The LSC calibration image was used as input to the ISP pipeline to detect the color shift. First of all, there is a mild green and red shift in the grey points. This may be attributed to overcorrected CCM. The other factor making this shift worse is LSC itself. The peripheral area boosted by the LSC gain looks much worse than the center. Even before the CCM correction, the LSC corrected image shows more green in the darker pixels.
-
-- Gray image without LSC
-
-![image.png](images/image-22.png)
-
-- Gray image with LSC
-
-![image.png](images/image-23.png)
-
----
-
-**Result** 
-
-It turns out the LSC calibration map was generated without the BLC step. Therefore, a non-uniform intensity distribution was observed even in the calibration image. However, it is observed some green shift after CCM. It is highly likely related to the neutral preservation issue of the CCM matrix, which will be covered in the later update.
-
-- Gray image with updated LSC
-
-![image.png](images/image-24.png)
-
-![image.png](images/image-25.png)
-
----
-
-## Update 2 - LSC overcorrection
-
-Initial testing of the indoor scene revealed excessive brightness at the image periphery, indicating an overcorrection in the Lens Shading Correction (LSC) pipeline. The original LSC calibration map was derived using a captured image of a white monitor display. However, this yielded an extreme maximum gain factor exceeding 8.0 at the corners, implying that peripheral objects possessed only 12.5% of the intensity of central objects. Even accounting for aggressive optical vignetting, a gain of 8.0 is improbable for this optical design.
-
-The discrepancy was traced to the non-Lambertian emission profile of the monitor. Most LCD displays exhibit strong directionality. When viewed at the steep angles associated with the lens's peripheral field, the perceived intensity drops sharply compared to the normal (center) view. To rectify this, a new calibration dataset was acquired using a white wall under indirect, uniform room lighting. To mitigate non-uniformities in the wall surface, multiple frames were averaged. This averaged dataset was then fitted to a 2D polynomial function to generate a smooth, mathematically robust estimate of the system’s relative illumination.
-
-The resulting gain factor from the wall-based calibration was approximately 1.85, a significantly more realistic value for this lens-sensor combination. Both indoor and outdoor test cases confirm that the monitor-based calibration induced unnatural bright artifacts, whereas the wall-based polynomial fit provided a natural illumination balance.
-
-This highlights the necessity of using a Lambertian source for experimental LSC calibration. Relying solely on optical simulation can be insufficient, as final relative illumination is a composite of multiple factors: mechanical/optical vignetting, the radiometric cos4(θ) law, and CMOS sensor roll-off (pixel vignetting caused by Chief Ray Angle mismatch) [[Edmund optics ref](https://www.edmundoptics.com/knowledge-center/application-notes/imaging/sensor-relative-illumination-roll-off-and-vignetting/?srsltid=AfmBOoqElK6QWmWLCYhiStaRj9mkJ2JazP_-Ci17PWzCAOg7krYwvIgl](https://www.edmundoptics.com/knowledge-center/application-notes/imaging/sensor-relative-illumination-roll-off-and-vignetting/?srsltid=AfmBOoqElK6QWmWLCYhiStaRj9mkJ2JazP_-Ci17PWzCAOg7krYwvIgl))].
-
-**(1) Image of a painted wall with indirect lighting for calibration** 
-
-**(Left: calibration with monitor display, right: calibration with wall)**
-
-![image.png](images/image-26.png)
-
-![image.png](images/image-27.png)
-
-**(2) Indoor lighting**
-
-**(Left: calibration with monitor display, right: calibration with wall)**
-
-![image.png](images/image-28.png)
-
-![image.png](images/image-29.png)
-
-**(3) Outdoor daylight image** 
-
-**(Left: calibration with monitor display, right: calibration with wall)**
-
-![image.png](images/image-30.png)
-
-![image.png](images/image-31.png)
-
----
 
 # Update 3 - CFA interpolation issue
 
