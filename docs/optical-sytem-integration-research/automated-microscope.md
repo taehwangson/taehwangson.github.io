@@ -34,17 +34,17 @@ The physical system was designed for a compact footprint (304×152×254 mm) and
 
 **3. Automation & Custom Software (Python/GUI)**
 
-To make the system user-friendly and fully automated, I developed a custom **Python-based GUI (Tkinter)**.
+To make the system user-friendly and fully automated, I developed a custom Python-based GUI (Tkinter).
 
-- **System Control:** The software provided a "Live Mode," automated LED selection, and **motorized Z-stage control** for precise focusing.
-- **Automated Data Analysis:** I implemented an image processing pipeline using **Otsu thresholding** to identify and label single cells, allowing for the automated extraction of fluorescence intensities across different channels.
+- **System Control:** The software provided a "Live Mode," automated LED selection, and motorized Z-stage control for precise focusing.
+- **Automated Data Analysis:** I implemented an image processing pipeline using Otsu thresholding to identify and label single cells, allowing for the automated extraction of fluorescence intensities across different channels.
   ![[media11.gif]]
 
 **4. Results and Performance Validation**
 
 The final system demonstrated significant performance gains over legacy designs (such as "CytoPAN"):
 
-- **SNR Enhancement:** Achieved a **~20-fold enhancement in Signal-to-Noise Ratio (SNR)** for AF488, AF555, and AF647 channels.
+- **SNR Enhancement:** Achieved a ~20-fold enhancement in Signal-to-Noise Ratio (SNR) for AF488, AF555, and AF647 channels.
 - **Image Quality:** Automated identification and labeling were validated with a Spearman correlation of r=0.73 when comparing marker intensities.
   ![[images/automated-microscope-7.png]]![[images/automated-microscope-8.png]]
   ![[images/automated-microscope-9.png]]

@@ -8,7 +8,7 @@ parent: Optical system integration and research
 
 # Super-Resolved 3D Optical Metrology: Near-Field Mapping 
 
-This project introduced **Defocused Point Localization Mapped Accumulation (DePLOMA)**, a high-precision method for mapping 3D optical near-fields by tracking emitters in a liquid medium. By leveraging wave optics and diffraction physics, the system bypasses the traditional axial resolution limits of far-field microscopy. This research was published in [Nanophotonics](https://www.degruyterbrill.com/document/doi/10.1515/nanoph-2022-0546/html).
+This project introduced Defocused Point Localization Mapped Accumulation (DePLOMA), a high-precision method for mapping 3D optical near-fields by tracking emitters in a liquid medium. By leveraging wave optics and diffraction physics, the system bypasses the traditional axial resolution limits of far-field microscopy. This research was published in [Nanophotonics](https://www.degruyterbrill.com/document/doi/10.1515/nanoph-2022-0546/html).
 
 **Optical Design & Engineering Innovation**
 
@@ -21,8 +21,8 @@ This project introduced **Defocused Point Localization Mapped Accumulation (DePL
 
 **Metrology Performance**
 
-- **Resolution Enhancement:** Achieved an **axial resolution boost of >6x** compared to diffraction-limited Confocal Laser Scanning Microscopy (CLSM).
-- **3D Field Mapping:** Validated the system by reconstructing the 3D intensity distributions of gold nanoslits (100–700 nm), showing excellent agreement with **FDTD numerical simulations**.
+- **Resolution Enhancement:** Achieved an axial resolution boost of >6x compared to diffraction-limited Confocal Laser Scanning Microscopy (CLSM).
+- **3D Field Mapping:** Validated the system by reconstructing the 3D intensity distributions of gold nanoslits (100–700 nm), showing excellent agreement with FDTD numerical simulations.
   
   ![[near-field-mapping-4.png]]
   

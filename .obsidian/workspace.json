@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/optical-sytem-integration-research/automated-microscope.md",
+                "file": "docs/optical-sytem-integration-research/spr-microscopy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "automated-microscope"
+              "title": "spr-microscopy"
             }
           }
         ],
@@ -137,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/optical-sytem-integration-research/automated-microscope.md",
+                "file": "docs/optical-sytem-integration-research/spr-microscopy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for automated-microscope"
+              "title": "Backlinks for spr-microscopy"
             }
           },
           {
@@ -156,12 +156,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/optical-sytem-integration-research/automated-microscope.md",
+                "file": "docs/optical-sytem-integration-research/spr-microscopy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from automated-microscope"
+              "title": "Outgoing links from spr-microscopy"
             }
           },
           {
@@ -199,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/optical-sytem-integration-research/automated-microscope.md",
+                "file": "docs/optical-sytem-integration-research/spr-microscopy.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of automated-microscope"
+              "title": "Outline of spr-microscopy"
             }
           }
         ]
@@ -228,10 +228,10 @@
   },
   "active": "dd813d0c511d2182",
   "lastOpenFiles": [
-    "docs/optical-sytem-integration-research/index.md",
     "docs/optical-sytem-integration-research/near-field-mapping.md",
-    "docs/optical-sytem-integration-research/spr-microscopy.md",
+    "docs/optical-sytem-integration-research/index.md",
     "docs/optical-sytem-integration-research/automated-microscope.md",
+    "docs/optical-sytem-integration-research/spr-microscopy.md",
     "docs/optical-sytem-integration-research/images/media15.gif",
     "docs/optical-sytem-integration-research/images/near-field-mapping-4.png",
     "docs/optical-sytem-integration-research/images/media15.mp4",
