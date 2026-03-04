@@ -20,9 +20,9 @@ This project involved developing a method for axial localization by mapping refl
 - **Analytical Modeling:** I implemented a depth extraction model based on Fresnel coefficients and the Nelder model for fitting resonance characteristics.
 - **Performance:** The system achieved a precision of approximately 15 nm for axial localization, demonstrating its capability for high-accuracy surface metrology.
   
-![[images/spr-microscopy.png]]
-![[images/spr-microscopy-1.png]]
-![[images/spr-microscopy-2.png]]
+![](images/spr-microscopy.png)
+![](images/spr-microscopy-1.png)
+![](images/spr-microscopy-2.png)
 
 **2. Lateral Resolution Enhancement: Spatially Switched SPM (ssSPM)**
 
@@ -34,8 +34,8 @@ Conventional Surface Plasmon Microscopy (SPM) is limited by a long propagation l
 - **Metrology Validation:** The system was validated using resist polymer nanowires (widths from 150 nm to 7.8 μm) and 250 nm nanoparticles.
 - **Engineering Impact:** This technique enhanced lateral resolution by 15 times over conventional SPM, successfully approaching the optical diffraction limit without requiring fluorescent labels.
   
-  ![[images/spr-microscopy-3.png]]
-  ![[images/spr-microscopy-4.png]]
+  ![](images/spr-microscopy-3.png)
+  ![](images/spr-microscopy-4.png)
 
 **Technical Competencies Demonstrated:**
 

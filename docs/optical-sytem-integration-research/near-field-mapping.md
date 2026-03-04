@@ -1,5 +1,5 @@
 ---
-title: Super-Resolved 3D Optical Metrology: Near-Field Mapping 
+title: 3D Near-Field Metrology   
 layout: default
 comments: true
 nav_order: 3
@@ -16,7 +16,7 @@ This project introduced Defocused Point Localization Mapped Accumulation (DePLOM
 - **High-Precision Localization:** Implemented a custom MATLAB pipeline using **l**east-square fitting of multi-concentric Gaussian functions to achieve a lateral precision of 3.95 nm and an axial precision of 7.74 nm.
 - **System Architecture:** Developed on an inverted microscope platform featuring a 1.49 NA TIRF objective, an EM-CCD for high-speed acquisition (10 fps), and a motorized nanostage for fine focus control.
 - **Refractive Index Compensation:** Applied the Gibson and Lanni model to correct for OPL mismatches between immersion and sample layers, ensuring accurate 3D coordinate extraction.
-  ![[media15.gif]]
+  ![](images/media15.gif)
 
 
 **Metrology Performance**
@@ -24,7 +24,7 @@ This project introduced Defocused Point Localization Mapped Accumulation (DePLOM
 - **Resolution Enhancement:** Achieved an axial resolution boost of >6x compared to diffraction-limited Confocal Laser Scanning Microscopy (CLSM).
 - **3D Field Mapping:** Validated the system by reconstructing the 3D intensity distributions of gold nanoslits (100–700 nm), showing excellent agreement with FDTD numerical simulations.
   
-  ![[near-field-mapping-4.png]]
+  ![](images/near-field-mapping-4.png)
   
 
 
