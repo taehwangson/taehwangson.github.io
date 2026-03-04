@@ -8,7 +8,7 @@ parent: Lens Design Portfolio
 
 # Photographic Lens 
 
-1. Landscape Lens (Meniscus Design)
+# Landscape Lens 
 
 - **Specs:** f/15, f=100 mm, HFOV = ±30°.
 - **Design Approach:** Explored stop-in-front and stop-in-rear configurations using a BK7 negative meniscus lens. Leveraged lens bending and stop positioning near the center of curvature to eliminate coma and flatten the tangential field.
@@ -16,7 +16,7 @@ parent: Lens Design Portfolio
   ![](images/Pasted image 20260304102821.png)
   ![](images/Pasted image 20260304102828.png)
 
-2. Petzval Portrait Lens with Field Flattener
+# Petzval Portrait Lens with Field Flattener
 
 - **Specs:** f/3.7, f=100 mm, field of ±14°.
 - **Design Approach:** Optimized a classic two-doublet Petzval architecture for best RMS spot size. Introduced a negative BK7 lens near the image plane to flatten the Petzval surface and correct distortion.
@@ -24,7 +24,7 @@ parent: Lens Design Portfolio
   ![](images/Pasted image 20260304103000.png)
   ![](images/Pasted image 20260304103015.png)
 
-3. The Cooke Triplet (35mm SLR Format)
+# The Cooke Triplet 
 
 - **Specs:** f/5.6, f=50 mm, 48° full field of view (24x36 mm film format).
 - **Design Approach:** Utilized a three-element design with LAK7 and SF2 glasses. Optimized for minimum RMS spot size while maintaining a back focal distance greater than 32 mm and distortion under 1%.
@@ -32,7 +32,7 @@ parent: Lens Design Portfolio
   ![](images/Pasted image 20260304103105.png)
   ![](images/Pasted image 20260304103115.png)
 
-4. Double Gauss Lens (Advanced Objective)
+# Double Gauss Lens
 
 - **Specs:** f/5.6, f=50 mm, 48° full field (35mm SLR format).
 - **Design Approach:** Employed a symmetric architecture starting with two positive meniscus lenses facing a central stop. Split elements into cemented doublets to create buried surfaces for color correction and utilized symmetry to automatically minimize odd aberrations like coma and distortion.

@@ -106,4 +106,7 @@ resonance microscopy," Optics Communications, 2018.
 
 ## Contact
 
-- Email: taehwangson1225@gmail.com
+- Email:  taehwangson1225 at gmail dot com
+- [Google Scholar](https://scholar.google.com/citations?user=diRPhFIAAAAJ&hl=en)
+- [LinkedIn]([linkedin.com/in/taehwang-son-452724b5](https://www.linkedin.com/in/taehwang-son-452724b5/))
+

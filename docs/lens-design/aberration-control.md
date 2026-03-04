@@ -10,7 +10,7 @@ parent: Lens Design Portfolio
 
 This project focuses on the fundamental principles of aberration correction, exploring how lens bending, aspherization, and glass selection can be used to eliminate spherical aberration, coma, and chromatic focal shifts.
 
-1. Singlet Lens Optimization (Spherical vs. Aspheric)
+# Singlet Lens Optimization (Spherical vs. Aspheric)
 
 - **Specs:** f=4.33 mm, F/1 speed (NA=0.5).
 - **Design Approach:** Evaluated a standard BK7 plano-convex lens against an optimized hyperbolic version where the conic constant was set to the squared refractive index (K=−n2). Further refined the design using a general asphere with 6th, 8th, and 10th-order coefficients to minimize RMS spot size.
@@ -19,7 +19,7 @@ This project focuses on the fundamental principles of aberration correction, exp
   ![](images/Pasted image 20260304111609.png)
   ![](images/Pasted image 20260304111707.png)
 
-2. Lens Bending and Splitting Strategies
+# Lens Bending and Splitting Strategies
 
 - **Specs:** f=100 mm, F/4 BK7 singlet.
 - **Design Approach:** Performed a trade study on the "Shape Factor" to find the bending that minimizes third-order spherical aberration (W040​). Compared the performance of a single optimized lens against a "split" design using two lower-power plano-convex elements.
@@ -29,7 +29,7 @@ This project focuses on the fundamental principles of aberration correction, exp
   ![](images/Pasted image 20260304111814.png)
   ![](images/Pasted image 20260304111931.png)
 
-3. Achromatic and Apochromatic Design
+# Achromatic and Apochromatic Design
 
 - **Specs:** f=2400 mm (F/12) and f=1200 mm (F/12).
 - **Design Approach:** Designed a cemented doublet using BK7 and F4 glass to correct longitudinal axial color. Advanced to an **apochromatic triplet** (FPL53, NBK7, and NBAF52) using glass dispersion modeling to ensure the chromatic focal shift curve crossed zero at three distinct wavelengths.
@@ -39,7 +39,7 @@ This project focuses on the fundamental principles of aberration correction, exp
   ![](images/Pasted image 20260304112133.png)
   ![](images/Pasted image 20260304112139.png)
 
-4. Achromatization using Buried Surfaces
+# Achromatization using Buried Surfaces
 
 - **Specs:** f=100 mm, F/12, ±0.25∘ field.
 - **Design Approach:** Utilized a "buried surface" architecture with a pair of index-matched glasses (same refractive index but different V-numbers). This allowed the shape factor to control spherical aberration and coma while the dispersive power difference at the internal interface corrected chromatic aberration.
