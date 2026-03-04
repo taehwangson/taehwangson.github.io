@@ -3,7 +3,7 @@ title: 3D Near-Field Metrology
 layout: default
 comments: true
 nav_order: 3
-parent: Optical system integration and research
+parent: Optical System Integration and Research
 ---
 
 # Super-Resolved 3D Optical Metrology: Near-Field Mapping 

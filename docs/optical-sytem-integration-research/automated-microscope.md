@@ -3,7 +3,7 @@ title: Multi-Channel Fluorescence Microscope
 layout: default
 comments: true
 nav_order: 1
-parent: Optical system integration and research
+parent: Optical System Integration and Research
 ---
 
 

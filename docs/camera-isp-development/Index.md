@@ -1,5 +1,5 @@
 ---
-title: Camera ISP development
+title: Camera ISP Development
 layout: default
 comments: true
 nav_order: 5

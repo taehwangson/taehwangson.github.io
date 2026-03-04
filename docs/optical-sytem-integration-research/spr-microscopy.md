@@ -3,10 +3,10 @@ title: Advanced Surface Plasmon Resonance (SPR) Systems
 layout: default
 comments: true
 nav_order: 2
-parent: Optical system integration and research
+parent: Optical System Integration and Research
 ---
 
-# Advanced Surface Plasmon Resonance (SPR) Systems
+# Surface Plasmon Resonance (SPR) Systems
 
 This work focuses on the development of high-resolution imaging modalities that leverage the unique properties of Surface Plasmons (SP)—longitudinal electron density waves at metal-dielectric interfaces—to perform label-free quantification of surface states. This research was published in [Optics Communications](https://www.sciencedirect.com/science/article/pii/S0030401817308878) and [Optics Letters](https://opg.optica.org/ol/fulltext.cfm?uri=ol-43-4-959).
 

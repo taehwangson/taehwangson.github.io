@@ -1,5 +1,5 @@
 ---
-title: Optical system integration and research
+title: Optical System Integration and Research
 layout: default
 comments: true
 nav_order: 4
