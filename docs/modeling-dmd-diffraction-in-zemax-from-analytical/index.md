@@ -25,4 +25,3 @@ This article outlines the analytical derivation and Zemax implementation of a D
 
 The primary objective is to predict the positioning and intensity distribution of diffracted orders accurately. It is possible to get its far-field diffraction pattern with numerical calculation using the Fourier transform of the aperture. However, this requires significant computation and does not provide an intuitive understanding of DMD diffraction. Moreover, unlike applications involving arbitrary beam shaping or computer-generated holography (CGH), which require iterative phase retrieval, this model focuses on the fundamental grating physics and the "blaze grating" effect produced by the mechanical mirror tilt.
 
----
