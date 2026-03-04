@@ -22,77 +22,49 @@
             }
           },
           {
-            "id": "cc30d3b04c993d85",
+            "id": "6a961eabe6b1a5dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/lens-design/photographic-lens.md",
+                "file": "docs/optical-sytem-integration-research/automated-microscope.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "photographic-lens"
+              "title": "automated-microscope"
             }
           },
           {
-            "id": "7c13f2057b017811",
+            "id": "f1a5bd08152987f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/lens-design/microscope-and-relay.md",
+                "file": "docs/optical-sytem-integration-research/spr-microscopy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "microscope-and-relay"
+              "title": "spr-microscopy"
             }
           },
           {
-            "id": "d400f622946c6ccb",
+            "id": "dd813d0c511d2182",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/lens-design/aberration-control.md",
+                "file": "docs/optical-sytem-integration-research/automated-microscope.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aberration-control"
-            }
-          },
-          {
-            "id": "2c5bca78ecab49f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/lens-design/aberration-control.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "aberration-control"
-            }
-          },
-          {
-            "id": "173086c096f5751c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/lens-design/microscope-and-relay.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "microscope-and-relay"
+              "title": "automated-microscope"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -165,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/lens-design/microscope-and-relay.md",
+                "file": "docs/optical-sytem-integration-research/automated-microscope.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for microscope-and-relay"
+              "title": "Backlinks for automated-microscope"
             }
           },
           {
@@ -184,12 +156,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/lens-design/microscope-and-relay.md",
+                "file": "docs/optical-sytem-integration-research/automated-microscope.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from microscope-and-relay"
+              "title": "Outgoing links from automated-microscope"
             }
           },
           {
@@ -227,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/lens-design/microscope-and-relay.md",
+                "file": "docs/optical-sytem-integration-research/automated-microscope.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of microscope-and-relay"
+              "title": "Outline of automated-microscope"
             }
           }
         ]
@@ -254,27 +226,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "173086c096f5751c",
+  "active": "dd813d0c511d2182",
   "lastOpenFiles": [
-    "docs/lens-design/images/Pasted image 20260304110525.png",
+    "docs/optical-sytem-integration-research/index.md",
+    "docs/optical-sytem-integration-research/near-field-mapping.md",
+    "docs/optical-sytem-integration-research/spr-microscopy.md",
+    "docs/optical-sytem-integration-research/automated-microscope.md",
+    "docs/optical-sytem-integration-research/images/media15.gif",
+    "docs/optical-sytem-integration-research/images/near-field-mapping-4.png",
+    "docs/optical-sytem-integration-research/images/media15.mp4",
+    "docs/optical-sytem-integration-research/images/near-field-mapping-3.png",
+    "docs/optical-sytem-integration-research/images/near-field-mapping-2.png",
+    "docs/optical-sytem-integration-research/images/near-field-mapping-1.png",
+    "docs/optical-sytem-integration-research/images/near-field-mapping.png",
+    "docs/optical-sytem-integration-research/images/spr-microscopy-4.png",
+    "docs/optical-sytem-integration-research/images/spr-microscopy-3.png",
+    "docs/optical-sytem-integration-research/images/spr-microscopy-2.png",
+    "docs/optical-sytem-integration-research/images/spr-microscopy-1.png",
+    "Untitled 2.md",
+    "Untitled 1.md",
+    "docs/media11.mp4",
+    "index.md",
+    "docs/optical-sytem-integration-research/images",
+    "CODE_OF_CONDUCT.md",
+    "docs/optical-sytem-integration-research",
     "docs/lens-design/microscope-and-relay.md",
+    "docs/lens-design/aberration-control.md",
     "docs/lens-design/photographic-lens.md",
     "docs/camera-isp-development/Index.md",
     "docs/lens-design/index.md",
-    "docs/lens-design/aberration-control.md",
     "docs/lens-design/telescope.md",
-    "index.md",
-    "docs/lens-design/images/Pasted image 20260304110922.png",
-    "docs/lens-design/images/Pasted image 20260304111707.png",
-    "docs/lens-design/images/Pasted image 20260304111538.png",
-    "docs/lens-design/images/Pasted image 20260304112249.png",
-    "docs/lens-design/images/Pasted image 20260304112139.png",
-    "docs/lens-design/images/Pasted image 20260304112133.png",
-    "docs/lens-design/images/Pasted image 20260304112025.png",
-    "docs/lens-design/images/Pasted image 20260304112018.png",
-    "docs/lens-design/images/Pasted image 20260304111931.png",
-    "docs/lens-design/images/Pasted image 20260304111916.png",
-    "Untitled 1.md",
     "docs/lens-design/images",
     "README.md",
     "docs/lens-design",
@@ -289,18 +270,9 @@
     "docs/modeling-dmd-diffraction-in-zemax-from-analytical/pythonmodel.md",
     "docs/modeling-dmd-diffraction-in-zemax-from-analytical/analyticalmodel copy 2.md",
     "docs/modeling-dmd-diffraction-in-zemax-from-analytical/analyticalmodel copy.md",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/analyticalmodel.md",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/analytialmodel.md",
-    "docs/camera-isp-development/update-11.md",
-    "docs/camera-isp-development/update-10.md",
-    "docs/camera-isp-development/update-9.md",
     "docs/modeling-dmd-diffraction-in-zemax-from-analytical/images",
     "docs/modeling-dmd-diffraction-in-zemax-from-analytical/Scattering_DMD_analytical_250218_v2.dll",
     "docs/modeling-dmd-diffraction-in-zemax-from-analytical/Scattering_DMD_250217_v3.dll",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/Diff2D_DMD_250216_v2.dll",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical /Scattering_DMD_analytical_250218_v2.dll",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical /Scattering_DMD_250217_v3.dll",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical /Diff2D_DMD_250216_v2.dll"
+    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/Diff2D_DMD_250216_v2.dll"
   ]
 }
