@@ -27,7 +27,13 @@ The simulation provides five degrees of freedom via interactive sliders, enablin
 
 To validate the analytical model, the total intensity distribution $I(q)$ was implemented in a Python-based interactive simulation. This tool allows for real-time visualization of how the diffraction pattern evolves under different physical and geometric constraints. TI DMD 7000 spec was employed.
 
-[https://dmd-simulation-jw3t5pa5p6y7aqvsocwrzn.streamlit.app/?embed=true](https://dmd-simulation-jw3t5pa5p6y7aqvsocwrzn.streamlit.app/?embed=true)
+<!-- [https://dmd-simulation-jw3t5pa5p6y7aqvsocwrzn.streamlit.app/?embed=true](https://dmd-simulation-jw3t5pa5p6y7aqvsocwrzn.streamlit.app/?embed=true) -->
+<iframe 
+  src="https://dmd-simulation-jw3t5pa5p6y7aqvsocwrzn.streamlit.app/?embed=true" 
+  width="100%" 
+  height="600px" 
+  frameborder="0">
+</iframe>
 
 ## Python interactive phase matching condition
 
@@ -42,4 +48,10 @@ The implementation distinguishes between two variables:
 
 By adjusting the sliders, the user can observe how the energy envelope (the blue dot) shifts across the stationary grating orders. Maximum efficiency is reached when the blue dot overlaps with a red dot, satisfying the phase-matching condition for a specific (*m*,*n*) order.
 
-[https://dmd-simulation-mlbegwhffsk9tjetaaaqz5.streamlit.app/?embed=true](https://dmd-simulation-mlbegwhffsk9tjetaaaqz5.streamlit.app/?embed=true)
+<!-- [https://dmd-simulation-mlbegwhffsk9tjetaaaqz5.streamlit.app/?embed=true](https://dmd-simulation-mlbegwhffsk9tjetaaaqz5.streamlit.app/?embed=true) -->
+<iframe 
+  src="https://dmd-simulation-mlbegwhffsk9tjetaaaqz5.streamlit.app/?embed=true" 
+  width="100%" 
+  height="600px" 
+  frameborder="0">
+</iframe>
