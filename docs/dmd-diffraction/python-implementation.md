@@ -31,7 +31,7 @@ To validate the analytical model, the total intensity distribution $I(q)$ was im
 <iframe 
   src="https://dmd-simulation-jw3t5pa5p6y7aqvsocwrzn.streamlit.app/?embed=true" 
   width="100%" 
-  height="600px" 
+  height="1000px" 
   frameborder="0">
 </iframe>
 
@@ -52,6 +52,6 @@ By adjusting the sliders, the user can observe how the energy envelope (the blue
 <iframe 
   src="https://dmd-simulation-mlbegwhffsk9tjetaaaqz5.streamlit.app/?embed=true" 
   width="100%" 
-  height="600px" 
+  height="1000px" 
   frameborder="0">
 </iframe>
