@@ -21,7 +21,8 @@ The simulation provides five degrees of freedom via interactive sliders, enablin
 - **Observation Distance (L):** Scales the physical "mm" footprint of the pattern on the screen.
 - **Wavelength (λ):** Directly scales the angular divergence of the grating orders and the width of the central blaze.
 
-![image.png](images/image.png)
+![](images/image-8.jpg)
+
 
 ## Python interactive diffraction simulation
 
