@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7685819dbb55730d",
+        "id": "beb09421f18666ea",
         "type": "tabs",
         "children": [
           {
-            "id": "f49be8b30b31ee71",
+            "id": "97458004a1914cbd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/lens-design/aberration-control.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "aberration-control"
+              "title": "New tab"
             }
           }
         ]
@@ -94,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/lens-design/aberration-control.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +100,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for aberration-control"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -113,12 +109,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/lens-design/aberration-control.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from aberration-control"
+              "title": "Outgoing links from index"
             }
           },
           {
@@ -156,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/lens-design/aberration-control.md",
+                "file": "index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of aberration-control"
+              "title": "Outline of index"
             }
           }
         ]
@@ -183,30 +179,40 @@
       "bases:Create new base": false
     }
   },
-  "active": "f49be8b30b31ee71",
+  "active": "97458004a1914cbd",
   "lastOpenFiles": [
+    "docs/nanofabrication/images/nanofabrication-5.png",
+    "docs/nanofabrication/nanofabrication.md",
+    "docs/nanofabrication/index.md",
+    "docs/nanofabrication/images/nanofabrication.png",
+    "docs/nanofabrication/images",
+    "Untitled.md",
+    "docs/nanofabrication",
+    "docs/nanofabrication/images/nanofabrication-4.png",
+    "docs/nanofabrication/images/nanofabrication-3.png",
+    "docs/nanofabrication/images/nanofabrication-2.png",
+    "docs/nanofabrication/images/nanofabrication-1.png",
+    "Spectral Metrology and Nanofabrication Characterizing Sub-100nm Structures-4.png",
+    "Spectral Metrology and Nanofabrication Characterizing Sub-100nm Structures-2.png",
+    "Spectral Metrology and Nanofabrication Characterizing Sub-100nm Structures.png",
+    "Spectral Metrology and Nanofabrication Characterizing Sub-100nm Structures-1.png",
+    "index.md",
+    "aberration.md",
+    "docs/lens-design/aberration-control.md",
     "docs/lens-design/microscope-and-relay.md",
     "docs/lens-design/photographic-lens.md",
     "docs/lens-design/telescope.md",
-    "docs/lens-design/aberration-control.md",
+    "2026-03-04.md",
+    "Untitled.base",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
     "images/Pasted.md",
     "images",
-    "index.md",
     "docs/optical-sytem-integration-research/spr-microscopy.md",
     "docs/optical-sytem-integration-research/near-field-mapping.md",
     "docs/optical-sytem-integration-research/index.md",
     "docs/optical-sytem-integration-research/automated-microscope.md",
-    "docs/optical-sytem-integration-research/images/media15.gif",
-    "docs/optical-sytem-integration-research/images/near-field-mapping-4.png",
     "docs/optical-sytem-integration-research/images/media15.mp4",
-    "docs/optical-sytem-integration-research/images/near-field-mapping-3.png",
-    "docs/optical-sytem-integration-research/images/near-field-mapping-2.png",
-    "docs/optical-sytem-integration-research/images/near-field-mapping-1.png",
-    "docs/optical-sytem-integration-research/images/near-field-mapping.png",
-    "docs/optical-sytem-integration-research/images/spr-microscopy-4.png",
-    "docs/optical-sytem-integration-research/images/spr-microscopy-3.png",
-    "docs/optical-sytem-integration-research/images/spr-microscopy-2.png",
-    "docs/optical-sytem-integration-research/images/spr-microscopy-1.png",
     "Untitled 2.md",
     "Untitled 1.md",
     "docs/media11.mp4",
@@ -221,15 +227,6 @@
     "docs/display-performance-measurement/index.md",
     "docs/modeling-dmd-diffraction-in-zemax-from-analytical/index.md",
     "docs/modeling-dmd-diffraction-in-zemax-from-analytical/reference-appendix.md",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/appendix.md",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/zemax-dll copy.md",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/zemax-dll.md",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/analytical-model.md",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/python-implementation.md",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/pythonmodel.md",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/analyticalmodel copy 2.md",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/images",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/Scattering_DMD_analytical_250218_v2.dll",
-    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/Scattering_DMD_250217_v3.dll"
+    "docs/modeling-dmd-diffraction-in-zemax-from-analytical/appendix.md"
   ]
 }
