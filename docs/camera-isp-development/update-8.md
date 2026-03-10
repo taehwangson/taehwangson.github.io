@@ -3,7 +3,7 @@ title: Update 8 - Anti-aliasing (AA) filter
 layout: default
 comments: true
 nav_order: 8
-parent: Camera ISP development
+parent: Camera ISP Development
 ---
 
 # Update 8 - Anti-aliasing (AA) filter

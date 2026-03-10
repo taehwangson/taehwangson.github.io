@@ -3,7 +3,7 @@ title: Update 11 - Fixed pattern noise removal
 layout: default
 comments: true
 nav_order: 11
-parent: Camera ISP development
+parent: Camera ISP Development
 ---
 
 # Update 11 - Fixed pattern noise removal

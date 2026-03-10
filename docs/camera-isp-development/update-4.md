@@ -3,7 +3,7 @@ title: Update 4 - Adaptive AWB Gain Tuning, Weighted Gray World Compensation
 layout: default
 comments: true
 nav_order: 4
-parent: Camera ISP development
+parent: Camera ISP Development
 ---
 
 # Update 4 - Adaptive AWB Gain Tuning, Weighted Gray World Compensation

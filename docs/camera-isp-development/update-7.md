@@ -3,7 +3,7 @@ title: Update 7 - Lateral chromatic aberration correction
 layout: default
 comments: true
 nav_order: 7
-parent: Camera ISP development
+parent: Camera ISP Development
 ---
 
 

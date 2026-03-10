@@ -6,7 +6,7 @@ nav_order: 5
 has_children: true
 ---
 
-# Camera ISP development
+# Camera ISP Development
 <!-- {: .no_toc } -->
 Updated on Jan. 20, 2025, Taehwang Son
 

@@ -3,7 +3,7 @@ title: Update 9 - Luminance (Y)  channel noise filter and edge enhancement
 layout: default
 comments: true
 nav_order: 9
-parent: Camera ISP development
+parent: Camera ISP Development
 ---
 
 # Update 9 - Luminance (Y)  channel noise filter and edge enhancement

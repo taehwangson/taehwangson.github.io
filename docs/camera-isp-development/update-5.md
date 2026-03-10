@@ -3,7 +3,7 @@ title: Update 5 -  Sensor linearization and white balance calibration based on c
 layout: default
 comments: true
 nav_order: 5
-parent: Camera ISP development
+parent: Camera ISP Development
 ---
 
 

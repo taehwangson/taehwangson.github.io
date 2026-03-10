@@ -7,7 +7,7 @@ nav_order: 7
 
 # Spectral Metrology and Nanofabrication
 
-This research focuses on the optical characterization and failure analysis of nanofabricated metal-glass structures, utilizing high-sensitivity spectrometry and numerical simulations to validate fabrication quality and sensing performance.
+This research focuses on the optical characterization and failure analysis of nanofabricated metal-glass structures, utilizing high-sensitivity spectrometry and numerical simulations to validate fabrication quality and sensing performance. The related research was published in [Science Advanced]([[https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202301766]]) in 2025. 
 
 ## Sub-100nm Nanodisks Fabrication and
 

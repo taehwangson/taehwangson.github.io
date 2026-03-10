@@ -3,7 +3,7 @@ title: Update 2 - LSC overcorrection
 layout: default
 comments: true
 nav_order: 2
-parent: Camera ISP development
+parent: Camera ISP Development
 ---
 
 ## Update 2 - LSC overcorrection

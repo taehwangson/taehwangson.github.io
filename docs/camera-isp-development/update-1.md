@@ -3,7 +3,7 @@ title: Update 1-Green color on peripheral pixels
 layout: default
 comments: true
 nav_order: 1
-parent: Camera ISP development
+parent: Camera ISP Development
 ---
 
 

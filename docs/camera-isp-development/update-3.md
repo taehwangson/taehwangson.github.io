@@ -3,7 +3,7 @@ title: Update 3 - CFA interpolation issue
 layout: default
 comments: true
 nav_order: 3
-parent: Camera ISP development
+parent: Camera ISP Development
 ---
 
 # Update 3 - CFA interpolation issue

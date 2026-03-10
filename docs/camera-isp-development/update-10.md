@@ -3,7 +3,7 @@ title: Update 10- Chroma filtering
 layout: default
 comments: true
 nav_order: 10
-parent: Camera ISP development
+parent: Camera ISP Development
 ---
 
 # Update 10- Chroma filtering
