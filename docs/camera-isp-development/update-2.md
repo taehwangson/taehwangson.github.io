@@ -20,24 +20,24 @@ This highlights the necessity of using a Lambertian source for experimental LSC 
 
 **(Left: calibration with monitor display, right: calibration with wall)**
 
-![image.png](images/image-26.png)
+![image.png](../images/image-26.png)
 
-![image.png](images/image-27.png)
+![image.png](../images/image-27.png)
 
 **(2) Indoor lighting**
 
 **(Left: calibration with monitor display, right: calibration with wall)**
 
-![image.png](images/image-28.png)
+![image.png](../images/image-28.png)
 
-![image.png](images/image-29.png)
+![image.png](../images/image-29.png)
 
 **(3) Outdoor daylight image** 
 
 **(Left: calibration with monitor display, right: calibration with wall)**
 
-![image.png](images/image-30.png)
+![image.png](../images/image-30.png)
 
-![image.png](images/image-31.png)
+![image.png](../images/image-31.png)
 
 ---

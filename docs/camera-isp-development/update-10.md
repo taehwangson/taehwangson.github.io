@@ -16,7 +16,7 @@ $$C_{out,r} = 0.5+(C_{in,r}-0.5)\times(1-M({\mid}E{\mid}))$$
 
 $$C_{out,b} = 0.5+(C_{in,b}-0.5)\times(1-M({\mid}E{\mid}))$$
 
-![image.png](images/image-102.png)
+![image.png](../images/image-102.png)
 
 Where $ M({\mid}E{\mid})$ represents the suppression Mask derived from the Luma edge map. Under high-gradient conditions (strong edges), the term $(1-M({\mid}E{\mid}))$ approaches 0, effectively desaturating the pixel to neutral gray. Conversely, in low-gradient regions (weak edges), the term approaches 1, preserving the original chromatic integrity.
 
@@ -26,31 +26,31 @@ However, applying these same parameters to an outdoor daylight scene resulted 
 
 **Outdoor night scene**
 
-![Correction for false color spot on vehicle surfaces ](images/image-109.png)
+![Correction for false color spot on vehicle surfaces ](../images/image-109.png)
 
 Correction for false color spot on vehicle surfaces 
 
-![Before edge-based chroma filtering](images/image-110.png)
+![Before edge-based chroma filtering](../images/image-110.png)
 
 Before edge-based chroma filtering
 
 **Outdoor day scene**
 
-![After edge-based chroma filtering](images/image-111.png)
+![After edge-based chroma filtering](../images/image-111.png)
 
 After edge-based chroma filtering
 
-![white halos near yellow sign and utility pole](images/image-112.png)
+![white halos near yellow sign and utility pole](../images/image-112.png)
 
 white halos near yellow sign and utility pole
 
-![image.png](images/image-113.png)
+![image.png](../images/image-113.png)
 
-![Before edge-based chroma filtering](images/image-114.png)
+![Before edge-based chroma filtering](../images/image-114.png)
 
 Before edge-based chroma filtering
 
-![After edge-based chroma filtering](images/image-115.png)
+![After edge-based chroma filtering](../images/image-115.png)
 
 After edge-based chroma filtering
 

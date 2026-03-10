@@ -20,32 +20,32 @@ In contrast, (1-4-1) and (1-6-1) filters utilize higher center-pixel weighti
 
 **Line grating image without AA filter**
 
-![image.png](images/image-87.png)
+![image.png](../images/image-87.png)
 
-![image.png](images/image-88.png)
+![image.png](../images/image-88.png)
 
 **Line grating image with AA filter (1-2-1)**
 
-![image.png](images/image-89.png)
+![image.png](../images/image-89.png)
 
-![image.png](images/image-90.png)
+![image.png](../images/image-90.png)
 
-![image.png](images/image-91.png)
+![image.png](../images/image-91.png)
 
 **Line grating image with AA filter (1-4-1)**
 
-![image.png](images/image-92.png)
+![image.png](../images/image-92.png)
 
-![image.png](images/image-93.png)
+![image.png](../images/image-93.png)
 
-![image.png](images/image-94.png)
+![image.png](../images/image-94.png)
 
 **Line grating image with AA filter (1-6-1)**
 
-![image.png](images/image-95.png)
+![image.png](../images/image-95.png)
 
-![image.png](images/image-96.png)
+![image.png](../images/image-96.png)
 
-![image.png](images/image-97.png)
+![image.png](../images/image-97.png)
 
 ---

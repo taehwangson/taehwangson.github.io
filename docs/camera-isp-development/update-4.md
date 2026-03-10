@@ -16,7 +16,7 @@ $Gain_{R,adjusted}= 1+(Gain_R -1)*w_{gwh}$
 
 $Gain_{B,adjusted}= 1+(Gain_B -1)*w_{gwh}$   
 
-![image-43](images/image-43.png)
+![image-43](../images/image-43.png)
 
 Ref: [egansign.com](http://egansign.com/)
 
@@ -24,27 +24,27 @@ On the other hand, outdoor daylight images demonstrate superior color fidelity w
 
 Gray world hypothesis weight $w_{gwh}$ =1.0
 
-![image.png](images/image-44.png)
+![image.png](../images/image-44.png)
 
-![image.png](images/image-45.png)
+![image.png](../images/image-45.png)
 
 Gray world hypothesis weight $w_{gwh}$ =0.5
 
-![image.png](images/image-46.png)
+![image.png](../images/image-46.png)
 
-![image.png](images/image-47.png)
+![image.png](../images/image-47.png)
 
 Gray world hypothesis weight $w_{gwh}$ =0
 
-![image.png](images/image-48.png)
+![image.png](../images/image-48.png)
 
-![image.png](images/image-49.png)
+![image.png](../images/image-49.png)
 
 IPhone 16
 
 ![](IMG_1499.jpg)
 
-![image.png](images/image-50.png)
+![image.png](../images/image-50.png)
 
 ![](ezgif-36f2f76e5e27a4ba.gif)
 
@@ -54,6 +54,6 @@ Galaxy A8 star
 
 ![](13-1._GalaxyA8_20251215_165452.jpg)
 
-![image.png](images/image-51.png)
+![image.png](../images/image-51.png)
 
 ---

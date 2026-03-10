@@ -35,21 +35,21 @@ The Full Analytical scattering implementation is technically the most accurate
 
 [Diff2D_DMD_250216_v2.dll](Diff2D_DMD_250216_v2.dll)
 
-![image.png](images/image-1.png)
+![image.png](../images/image-1.png)
 
 ## Scattering DLL (Delta Approximation)
 
 [Scattering_DMD_250217_v3.dll](Scattering_DMD_250217_v3.dll)
 
-![image.png](images/image-2.png)
+![image.png](../images/image-2.png)
 
 ## Scattering DLL (Full Analytical Model)
 
 [Scattering_DMD_analytical_250218_v2.dll](Scattering_DMD_analytical_250218_v2.dll)
 
-![image.png](images/image-3.png)
+![image.png](../images/image-3.png)
 
 ## Reference Python Result
 
-![image.png](images/image-4.png)
+![image.png](../images/image-4.png)
 

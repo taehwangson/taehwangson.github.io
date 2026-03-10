@@ -17,10 +17,10 @@ The system was engineered to handle multi-channel fluorescence. Key design miles
 
 - **Illumination Strategy:** Using Zemax simulations, I compared single-LED and 4-LED designs. While the 1-LED system offered better efficiency, the 4-LED configuration provided two times brighter illumination and eliminated "LED images" (artifacts) in the field.
 - **Critical Parameter Tuning:** I optimized the distance between the LED and condensing lens (R1​≈7 mm), which was identified as a critical factor for maximizing illumination intensity and achieving an artifact-free field.
-  ![](images/automated-microscope-1.png)
-  ![](images/automated-microscope-2.png)
-  ![](images/automated-microscope-3.png)
-![](images/automated-microscope-4.png)
+  ![](../images/automated-microscope-1.png)
+  ![](../images/automated-microscope-2.png)
+  ![](../images/automated-microscope-3.png)
+![](../images/automated-microscope-4.png)
 **2. Hardware Prototyping & Integration**
 
 The physical system was designed for a compact footprint (304×152×254 mm) and integrated several critical mechanical components:
@@ -28,8 +28,8 @@ The physical system was designed for a compact footprint (304×152×254 mm) and
 - **Fluidic Integration:** A custom fluidic system was integrated for priming samples with positive pressure, essential for the PDMS chip application.
 - **Arduino automation:** A PCB board equipped with Arduino Nano, LED drivers, a servo motor and BJT transistors is used to electronically switch LEDs. Arduino is connected PC for GUI-based LED control
   
-  ![](images/automated-microscope-5.png)
-![](images/automated-microscope-6.png)
+  ![](../images/automated-microscope-5.png)
+![](../images/automated-microscope-6.png)
 
 
 **3. Automation & Custom Software (Python/GUI)**
@@ -46,6 +46,6 @@ The final system demonstrated significant performance gains over legacy designs 
 
 - **SNR Enhancement:** Achieved a ~20-fold enhancement in Signal-to-Noise Ratio (SNR) for AF488, AF555, and AF647 channels.
 - **Image Quality:** Automated identification and labeling were validated with a Spearman correlation of r=0.73 when comparing marker intensities.
-  ![](images/automated-microscope-7.png)![](images/automated-microscope-8.png)
-  ![](images/automated-microscope-9.png)
-  ![](images/automated-microscope-11.png)
+  ![](../images/automated-microscope-7.png)![](../images/automated-microscope-8.png)
+  ![](../images/automated-microscope-9.png)
+  ![](../images/automated-microscope-11.png)

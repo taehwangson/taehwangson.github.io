@@ -14,21 +14,21 @@ In this implementation, a [non-local mean (NLM) filter](https://www.ipol.im/pub/
 
 **Outdoor, night vision, Y channel only**
 
-![cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21](images/image-98.png)
+![cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21](../images/image-98.png)
 
 cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21
 
-![cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11](images/image-99.png)
+![cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11](../images/image-99.png)
 
 cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11
 
 **Outdoor, daylight, Y channel only**
 
-![cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21](images/image-100.png)
+![cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21](../images/image-100.png)
 
 cv.fastNlMeansDenoising(), h=10, templateWindowSize=7, searchWindowSize=21
 
-![cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11](images/image-101.png)
+![cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11](../images/image-101.png)
 
 cv.fastNlMeansDenoising(), h=2, templateWindowSize=3, searchWindowSize=11
 
@@ -36,34 +36,34 @@ While NLM filtering effectively suppresses noise, the non-ideal nature of the fi
 
 $Y_{sharpened}=Y_{original}+M({\mid}E{\mid})*gain$
 
-![image.png](images/image-102.png)
+![image.png](../images/image-102.png)
 
 To specifically address 'beading artifacts'—where fine 1–2 pixel structures break into pixelated features due to high-frequency noise amplification—a 3x3 median filter was integrated into the edge processing. This median filter acts as a spatial outlier rejection step, suppressing isolated noise spikes in the edge map while preserving the structural continuity of thin tree branches. The result is a significant enhancement of branch outlines with a marked reduction in granular artifacts
 
 **Edge enhanced without median filter, Outdoor, daylight, Y channel only**
 
-![Edge enhancement without 3x3 median filter](images/image-103.png)
+![Edge enhancement without 3x3 median filter](../images/image-103.png)
 
 Edge enhancement without 3x3 median filter
 
-![Edge enhancement without 3x3 median filter](images/image-104.png)
+![Edge enhancement without 3x3 median filter](../images/image-104.png)
 
 Edge enhancement without 3x3 median filter
 
 **Edge enhanced with median filter, Outdoor, daylight, Y channel only**
 
-![Edge enhancement with 3x3 median filter](images/image-105.png)
+![Edge enhancement with 3x3 median filter](../images/image-105.png)
 
 Edge enhancement with 3x3 median filter
 
-![Edge enhancement with 3x3 median filter](images/image-106.png)
+![Edge enhancement with 3x3 median filter](../images/image-106.png)
 
 Edge enhancement with 3x3 median filter
 
 **Edge enhanced with median filter, Outdoor, Night vision (Exp 16ms, Gain 6), Y channel only**
 
-![image.png](images/image-107.png)
+![image.png](../images/image-107.png)
 
-![image.png](images/image-108.png)
+![image.png](../images/image-108.png)
 
 ---

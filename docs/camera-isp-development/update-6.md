@@ -20,18 +20,18 @@ In Python, these constraints (∑Row=1) can be strictly enforced by using the `
 
 1. **Indoor image before CCM**
 
-![image.png](images/image-61.png)
+![image.png](../images/image-61.png)
 
 1. **Indoor image after CCM (∑Row≠1)**
 
-![image.png](images/image-62.png)
+![image.png](../images/image-62.png)
 
-![image.png](images/image-63.png)
+![image.png](../images/image-63.png)
 
 1. **Indoor image after CCM (∑Row=1)**
 
-![image.png](images/image-64.png)
+![image.png](../images/image-64.png)
 
-![image.png](images/image-65.png)
+![image.png](../images/image-65.png)
 
 ---

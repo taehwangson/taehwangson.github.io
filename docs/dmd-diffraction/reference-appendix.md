@@ -30,16 +30,16 @@ References for DMD diffractive beam steering
 
 ## Derivation of Lattice Factor
 
-![image.png](images/image-5.png)
+![image.png](../images/image-5.png)
 
 ## Derivation of Single Mirror Factor
 
-![image.png](images/image-6.png)
+![image.png](../images/image-6.png)
 
 - $q_{blaze}$ definition
 
-![image.png](images/image-7.png)
+![image.png](../images/image-7.png)
 
 - Mirror normal vector $\hat {n}$ definition
 
-![image.jpeg](images/image.jpeg)
+![image.jpeg](../images/image.jpeg)

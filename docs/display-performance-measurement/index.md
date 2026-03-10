@@ -48,17 +48,17 @@ by Taehwang Son
     Analysis and chromaticity calculations are performed in a Jupyter Notebook using the [**Colour Science Python module**](https://www.colour-science.org/).
     
 
-![Multimode fiber end with a diffuser](images/f695eef4-7ab9-4be7-bf98-6af7e65df7c2.png)
+![Multimode fiber end with a diffuser](../images/f695eef4-7ab9-4be7-bf98-6af7e65df7c2.png)
 
 Multimode fiber end with a diffuser
 
-![24 Color checker measurement with multimode fiber](images/image.png)
+![24 Color checker measurement with multimode fiber](../images/image.png)
 
 24 Color checker measurement with multimode fiber
 
 ---
 
-![Raw data acquisition using Ocean Optics USB spectrometer ](images/image-1.png)
+![Raw data acquisition using Ocean Optics USB spectrometer ](../images/image-1.png)
 
 Raw data acquisition using Ocean Optics USB spectrometer 
 
@@ -66,7 +66,7 @@ Raw data acquisition using Ocean Optics USB spectrometer
 
 The XYZ values are computed by integrating the measured Spectral Power Distribution (SPD) with the CIE 1931 2° Standard Observer color matching functions (CMFs) across the visible wavelength range
 
-![image.png](images/image-2.png)
+![image.png](../images/image-2.png)
 
 X = ∑ S(λ) · x̄(λ) · Δλ
 
@@ -126,25 +126,25 @@ $b^* = 200[(\frac{Y}{Y_n})^{1/3} - \frac{Z}{Z_n})^{1/3}]$
 
 ### CIE 1931 xy chromaticity diagram
 
-![Dell P2715Q monitor xy chromaticity ](images/1dd97da1-0c77-44c7-a95a-7aca922c7f82.png)
+![Dell P2715Q monitor xy chromaticity ](../images/1dd97da1-0c77-44c7-a95a-7aca922c7f82.png)
 
 Dell P2715Q monitor xy chromaticity 
 
-![image.png](images/image-3.png)
+![image.png](../images/image-3.png)
 
 Reference data [Wikipedia: Color Checker](https://en.wikipedia.org/wiki/ColorChecker)
 
 The x, y chromaticities of the 24 ColorChecker patches were measured. Display color performance is often evaluated using $\Delta {E_{a b}}^{\ast}$ instead of directly comparing xy coordinates. This is because color spaces like CIELUV or CIELAB offer improved perceptual uniformity, where Euclidean distance corresponds more closely to perceived color differences. Therefore, the measured xy coordinates must be converted into the CIELUV space for this analysis [reference]. The calculation of $\Delta {E_{a b}}^*$ will be discussed in Sec. 3-c).
 
-![image.png](images/image-4.png)
+![image.png](../images/image-4.png)
 
-![image.png](images/image-5.png)
+![image.png](../images/image-5.png)
 
 Experimentally acquired x, y and reference x, y values are plotted with a y = x line. Both x and y values match well with reference values, and $R^2$ values were calculated to be > 0.99
 
 ### Luminance and RGB value relationship
 
-![image.png](images/image-6.png)
+![image.png](../images/image-6.png)
 
 The monitors I measured have an sRGB color space, meaning the luminance response follows the sRGB electro-optical transfer function (EOTF). This function is characterized by a linear segment at low brightness levels (to avoid harsh banding near black) and a power-law (gamma) segment for mid and high brightness levels, approximating a gamma of about 2.2 for most of the range [2]. The following equation is used to decode (linearize) sRGB pixel values into linear RGB values:
 
@@ -164,7 +164,7 @@ Note that the “White” patch (Patch 19) was used for luminance calibration. T
 
 ### CIE 1976 u'v' chromaticity  diagram
 
-![Dell P2715Q monitor u’v’ chromaticity ](images/image-7.png)
+![Dell P2715Q monitor u’v’ chromaticity ](../images/image-7.png)
 
 Dell P2715Q monitor u’v’ chromaticity 
 
@@ -182,7 +182,7 @@ The other observation could be comparsion between the first and second monitor. 
 
 ### sRGB Gamut coverage
 
-![image.png](images/image-8.png)
+![image.png](../images/image-8.png)
 
 sRGB gamut coverage was determined by measuring the chromaticity coordinates of the red, green, and blue primaries. For example, the red primary corresponds to the RGB value [255, 0, 0]. To approximate these values, I displayed large rectangular patches in PowerPoint, assigning specific RGB values to each primary color.
 
@@ -200,7 +200,7 @@ I found [a PDF version of the color checker](https://en.wikipedia.org/wiki/File:
 
 Using Python Dash, I made a simple GUI-based application for generating color checker images. [**ColorChecker-App** GitHub page](https://github.com/taehwangson/ColorChecker-App)
 
-![ScreenRecording.gif](images/ScreenRecording.gif)
+![ScreenRecording.gif](../images/ScreenRecording.gif)
 
 ### Color Correction Matrix (CCM)
 

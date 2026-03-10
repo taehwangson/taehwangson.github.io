@@ -32,13 +32,13 @@ $O_{input}(i,j)$: Fixed pattern offset generated before amplification
 
 $O_{output}(i,j)$: Black level, used to prevent signal clipping during Analog-to-Digital Conversion (ADC).
 
-![mean pixel value (ADU) of 100-frame average dark images w.r.t. gain and exposure time](images/image-116.png)
+![mean pixel value (ADU) of 100-frame average dark images w.r.t. gain and exposure time](../images/image-116.png)
 
 mean pixel value (ADU) of 100-frame average dark images w.r.t. gain and exposure time
 
 Images below are 100x100 pixels cropped images showing linear intensity increment with respect to gain and exposure time. As we saw in mean pixel value relation, the overall intensity is increased as gain and exposure time increase. But speckle patterns are major correction targets, which are potentially caused by manufacting errors.
 
-![100x100 pixel cropped original dark image with different gains and exposure times ](images/image-117.png)
+![100x100 pixel cropped original dark image with different gains and exposure times ](../images/image-117.png)
 
 100x100 pixel cropped original dark image with different gains and exposure times 
 
@@ -54,7 +54,7 @@ $$ I_{FPN}(i,j)≈G⋅O_{input}(i,j)+O_{output}(i,j) $$
 
 Plotting intensity versus gain allowed us to extract $O_{input}(i,j)$ as the slope of the linear fit. While most pixels remained near the baseline black level, specific "hot pixels" exhibited significant slopes, identifying them as high-offset outliers.
 
-![Calibration for $O_{input}(i,j)$. The graph shows $I_{FPN}(i,j)=G(i,j)*O_{input}(i,j)+O_{output}(i,j)$ relation because t is only 10us. The slope of linear fit line is $O_{input}(i,j)$](images/image-118.png)
+![Calibration for $O_{input}(i,j)$. The graph shows $I_{FPN}(i,j)=G(i,j)*O_{input}(i,j)+O_{output}(i,j)$ relation because t is only 10us. The slope of linear fit line is $O_{input}(i,j)$](../images/image-118.png)
 
 Calibration for $O_{input}(i,j)$. The graph shows $I_{FPN}(i,j)=G(i,j)*O_{input}(i,j)+O_{output}(i,j)$ relation because t is only 10us. The slope of linear fit line is $O_{input}(i,j)$
 
@@ -66,7 +66,7 @@ $I_{FPN}(i,j)=(G⋅K)t+O_{output}(i,j)$
 
 The slope of the intensity versus exposure time plot yields the dark current rate K(i,j). This parameter is critical for night vision applications, where long integration times amplify thermal leakage.
 
-![](images/image-119.png)
+![](../images/image-119.png)
 
 Calibration for k(i,j). The left graph shows $I_{FPN}(i,j)=G(i,j) \cdot [K(i,j) \cdot t]+O_{output}(i,j)$ relation because $O_{output}(i,j)$  is corrected. The slope of linear fit line is K(i,j).
 
@@ -74,19 +74,19 @@ Calibration for k(i,j). The left graph shows $I_{FPN}(i,j)=G(i,j) \cdot [K(i,j) 
 
 In standard operating conditions, spatial noise is often masked by temporal readout noise. However, in high-gain night vision applications, FPN frequently exceeds the temporal noise floor ($3σ_{temporal}$), appearing as false signals or "speckle." The effectiveness of the proposed correction is demonstrated through histogram analysis. Note that the histogram below shows pixel value distribution from original dark images at gain 8, $O_{input}(i,j)$ corrected images, and $O_{input}(i,j)$ and k(i,j) corrected images and the vertical lines correspond to $3σ_{temporal}$. The effective noise removal can be confirmed with dark images after $O_{input}(i,j)$ and k(i,j) corrected images. The raw dark signal distribution is significantly improved after correcting for $O_{input}$ and K(i,j). Notably, a small population of "impulse noise" remains; these are attributed to pixels reaching the hardware saturation limit, where the linear model no longer applies.
 
-![image.png](images/image-120.png)
+![image.png](../images/image-120.png)
 
-![100x100 pixel cropped images after $O_{input}(i,j)$ correction](images/image-121.png)
+![100x100 pixel cropped images after $O_{input}(i,j)$ correction](../images/image-121.png)
 
 100x100 pixel cropped images after $O_{input}(i,j)$ correction
 
-![100x100 pixel cropped images after $O_{input}(i,j)$ and k(i,j) corrected images](images/image-122.png)
+![100x100 pixel cropped images after $O_{input}(i,j)$ and k(i,j) corrected images](../images/image-122.png)
 
 100x100 pixel cropped images after $O_{input}(i,j)$ and k(i,j) corrected images
 
 Finally, the correction was applied to a representative night vision outdoor scene. The removal of FPN eliminated noticeable impulse noise that would otherwise trigger false detections in chroma filters or computer vision algorithms.
 
-![night vision image (gain 6, exposure time 15ms)](images/image-123.png)
+![night vision image (gain 6, exposure time 15ms)](../images/image-123.png)
 
 night vision image (gain 6, exposure time 15ms)
 

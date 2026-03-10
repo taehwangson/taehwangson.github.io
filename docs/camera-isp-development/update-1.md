@@ -13,7 +13,7 @@ parent: Camera ISP development
 
 After color correction, the peripheral pixel color is shifted to green. Especially the darker area is noticeably greenish. It is more obvious after CCM. CCM matrix shifts the green-ish peripheral more green tone.
 
-![image.png](images/image-20.png)
+![image.png](../images/image-20.png)
 
 ---
 
@@ -23,7 +23,7 @@ The same ISP pipeline was used for the 24 colorchecker target. The CCM applicati
 
 - 24 Colorcheck image CCM application
 
-![image.png](images/image-21.png)
+![image.png](../images/image-21.png)
 
 ---
 
@@ -33,11 +33,11 @@ The LSC calibration image was used as input to the ISP pipeline to detect the co
 
 - Gray image without LSC
 
-![image.png](images/image-22.png)
+![image.png](../images/image-22.png)
 
 - Gray image with LSC
 
-![image.png](images/image-23.png)
+![image.png](../images/image-23.png)
 
 ---
 
@@ -47,6 +47,6 @@ It turns out the LSC calibration map was generated without the BLC step. Therefo
 
 - Gray image with updated LSC
 
-![image.png](images/image-24.png)
+![image.png](../images/image-24.png)
 
-![image.png](images/image-25.png)
+![image.png](../images/image-25.png)

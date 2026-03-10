@@ -17,21 +17,21 @@ The lateral color plots illustrate the deviation of red and blue rays relative t
 
 **Reverse telephoto F/3.5 f=6mm, FOV +- 31 deg**
 
-![image.png](images/image-66.png)
+![image.png](../images/image-66.png)
 
-![Lateral color plot, object at infinity, D 2.72 um at 31 deg field ( 3.62 mm image)](images/image-67.png)
+![Lateral color plot, object at infinity, D 2.72 um at 31 deg field ( 3.62 mm image)](../images/image-67.png)
 
 Lateral color plot, object at infinity, D 2.72 um at 31 deg field ( 3.62 mm image)
 
-![Lateral color plot, object at 250mm, D 2.97 um at 31 deg field (3.6w mm image)](images/image-68.png)
+![Lateral color plot, object at 250mm, D 2.97 um at 31 deg field (3.6w mm image)](../images/image-68.png)
 
 Lateral color plot, object at 250mm, D 2.97 um at 31 deg field (3.6w mm image)
 
-![Marginal and chief rays](images/image-69.png)
+![Marginal and chief rays](../images/image-69.png)
 
 Marginal and chief rays
 
-![Chief rays for red, green, blue rays at image plane](images/image-70.png)
+![Chief rays for red, green, blue rays at image plane](../images/image-70.png)
 
 Chief rays for red, green, blue rays at image plane
 
@@ -43,33 +43,33 @@ Centroids were calculated for each dot across all three channels. The resulting 
 
 Consequently, the red channel shift remains uncorrected in the current iteration, although correction may be feasible if a specific theoretical design model becomes available. In contrast, the blue channel exhibits a clear, monotonic radial shift consistent with the Zemax simulation. This was modeled using polynomial fitting. During the dewarping stage, each pixel coordinate is transformed according to this fit and remapped using sub-pixel interpolation.
 
-![Dot grid pattern ](images/image-71.png)
+![Dot grid pattern ](../images/image-71.png)
 
 Dot grid pattern 
 
-![image.png](images/image-72.png)
+![image.png](../images/image-72.png)
 
-![Red channel center coordiante shift](images/image-73.png)
+![Red channel center coordiante shift](../images/image-73.png)
 
 Red channel center coordiante shift
 
-![Blue channel center coordiante shift](images/image-74.png)
+![Blue channel center coordiante shift](../images/image-74.png)
 
 Blue channel center coordiante shift
 
-![Blue channel, radial vector vs. distance from center](images/image-75.png)
+![Blue channel, radial vector vs. distance from center](../images/image-75.png)
 
 Blue channel, radial vector vs. distance from center
 
-![Blue channel, circumferential vector vs. distance from center](images/image-76.png)
+![Blue channel, circumferential vector vs. distance from center](../images/image-76.png)
 
 Blue channel, circumferential vector vs. distance from center
 
-![Red channel, radial vector vs. distance from center](images/image-77.png)
+![Red channel, radial vector vs. distance from center](../images/image-77.png)
 
 Red channel, radial vector vs. distance from center
 
-![Red channel, circumferential vector vs. distance from center](images/image-78.png)
+![Red channel, circumferential vector vs. distance from center](../images/image-78.png)
 
 Red channel, circumferential vector vs. distance from center
 
@@ -79,26 +79,26 @@ The comparison images demonstrate a significant improvement in image quality fol
 
 **Zoom-in dot grid pattern (left: before LCA correction, right: after LCA correction)**
 
-![image.png](images/image-79.png)
+![image.png](../images/image-79.png)
 
-![image.png](images/image-80.png)
+![image.png](../images/image-80.png)
 
 **Outdoor daylight image  (left: before LCA correction, right: after LCA correction)**
 
-![image.png](images/image-81.png)
+![image.png](../images/image-81.png)
 
-![image.png](images/image-82.png)
+![image.png](../images/image-82.png)
 
 **Zoom-in outdoor daylight image, right bottom  (left: before LCA correction, right: after LCA correction)**
 
-![image.png](images/image-83.png)
+![image.png](../images/image-83.png)
 
-![image.png](images/image-84.png)
+![image.png](../images/image-84.png)
 
 **Zoom-in outdoor daylight image, left top (left: before LCA correction, right: after LCA correction)**
 
-![image.png](images/image-85.png)
+![image.png](../images/image-85.png)
 
-![image.png](images/image-86.png)
+![image.png](../images/image-86.png)
 
 ---

@@ -27,30 +27,30 @@ Ultimately, Linear Fitting (Scalar Gains) produced the most robust results for
 
 **1. Independent RGB Non-linear Fitting**
 
-![image.png](images/image-52.png)
+![image.png](../images/image-52.png)
 
-![24 colorchecker](images/image-53.png)
+![24 colorchecker](../images/image-53.png)
 
 24 colorchecker
 
-![GWH applied ](images/image-54.png)
+![GWH applied ](../images/image-54.png)
 
 GWH applied 
 
 **2. G-Channel Linearization with Scalar Gains**
 
-![image.png](images/image-55.png)
+![image.png](../images/image-55.png)
 
-![image.png](images/image-56.png)
+![image.png](../images/image-56.png)
 
-![image.png](images/image-57.png)
+![image.png](../images/image-57.png)
 
 **3. Linear fitting ( y intercept = 0 )**
 
-![image.png](images/image-58.png)
+![image.png](../images/image-58.png)
 
-![image.png](images/image-59.png)
+![image.png](../images/image-59.png)
 
-![image.png](images/image-60.png)
+![image.png](../images/image-60.png)
 
 ---
