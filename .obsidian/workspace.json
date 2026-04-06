@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/lens-design/index.md",
+                "file": "docs/lens-design/microscope-and-relay.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "microscope-and-relay"
             }
           },
           {
@@ -199,6 +199,8 @@
   },
   "active": "4f21b919c6bf4132",
   "lastOpenFiles": [
+    "critical-dimension.md",
+    "docs/lens-design/index.md",
     "docs/advanced-lens-design/images/desensitization-and-tolerancing.png",
     "docs/advanced-lens-design/images/desensitization-and-tolerancing-2.png",
     "docs/advanced-lens-design/desensitization-and-tolerancing.md",
@@ -208,11 +210,9 @@
     "2026-03-04.md",
     "aberration.md",
     "CODE_OF_CONDUCT.md",
-    "critical-dimension.md",
     "index.md",
     "docs/lens-design/photographic-lens.md",
     "docs/lens-design/microscope-and-relay.md",
-    "docs/lens-design/index.md",
     "desensitization",
     "docs/lens-design/desensitization-and-tolerancing",
     "docs/advanced-lens-design/images/desensitization-and-tolerancing-11.png",
@@ -223,7 +223,6 @@
     "docs/advanced-lens-design/images/desensitization-and-tolerancing-7.png",
     "docs/advanced-lens-design/images/desensitization-and-tolerancing-6.png",
     "docs/advanced-lens-design/images/desensitization-and-tolerancing-5.png",
-    "docs/advanced-lens-design/images/desensitization-and-tolerancing-4.png",
     "docs/dmd-diffraction/analytical-model.md",
     "docs/dmd-diffraction/zemax-dll.md",
     "docs/dmd-diffraction/reference-appendix.md",

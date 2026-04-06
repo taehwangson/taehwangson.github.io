@@ -1,3 +1,6 @@
+---
+published: false
+---
 # 1. Project title
 
 Something like:
