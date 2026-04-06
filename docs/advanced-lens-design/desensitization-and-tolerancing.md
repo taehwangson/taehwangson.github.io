@@ -25,10 +25,15 @@ These aberrations grow strongly with small perturbations and are not adequately 
 Referring to the [paper](https://doi.org/10.1364/AO.443758), the sensitivities of UC and LA are explicitly incorporated into the merit function. Additionally, the Seidel aberration-based RMS wavefront estimate $\sigma_{W}^2$ is used in the primary aberration correction phase. This term is particularly important because it represents **aberration propagation** within the system. A larger $\sigma_{Seidel}^2$ implies that small perturbations may result in larger wavefront degradation because some canceled wavefront error can appear with perturbation. Thus, minimizing $\sigma_{Seidel}^2$ during early optimization, it reduces the system’s sensitivity to manufacturing errors.
 
 $$W_{LA}=W_{12101}(\vec{i}\cdot\vec{\rho})(\vec{H}\cdot\vec{\rho}) $$
+
 $$W_{UC}=W_{03001}(\vec{i}\cdot\vec{\rho})(\vec{\rho}\cdot\vec{\rho}) $$
+
 $$LA = \sqrt{\sum_{s=1}^{k}\Delta W_{LAs}^2}$$
+
 $$UC = \sqrt{\sum_{s=1}^{k}\Delta W_{UCs}^2}$$
+
 $$\sigma_W^2 \simeq \frac{W_{040}^2}{180}+\frac{W_{131}^2}{72}+\frac{W_{222}^2}{24}+(W_{220}+\frac{W_{222}}{2})^2$$
+
 $$\sigma_{Seidel}^2 \simeq \sum {W_{040s}}^2 + \sum {W_{131s}}^2 + \sum {W_{222s}}^2 + \sum {W_{220s}}^2$$
 
 ## Objective lens design (NA 0.45, f=1mm, FOV=+-1mm)
