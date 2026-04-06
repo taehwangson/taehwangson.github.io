@@ -1,3 +1,10 @@
+---
+title: Microscopy Objective Desensitization 
+layout: default
+comments: true
+nav_order: 1
+parent: Advanced Lens Design 
+---
 
 
 # Microscopy Objective Desensitization 
@@ -27,7 +34,7 @@ $$\sigma_{Seidel}^2 \simeq \sum {W_{040s}}^2 + \sum {W_{131s}}^2 + \sum {W_{222s
 ## Objective lens design (NA 0.45, f=1mm, FOV=+-1mm)
 
 ### Design requirement
-![[desensitization-and-tolerancing-2.png]]
+![desensitization-and-tolerancing-2.png](../images/desensitization-and-tolerancing-2.png)
 
 Many classical objective lenses are based on the Petzval portrait architecture, which provides a compact solution for moderate f-numbers with a limited number of elements.  
   
@@ -42,7 +49,7 @@ To achieve high NA and improved field performance:
 
 A simplified tolerance model was used to isolate the effect of aberration-based desensitization.
 
-![[desensitization-and-tolerancing-7.png]]
+![desensitization-and-tolerancing-7.png](../images/desensitization-and-tolerancing-7.png)
 
 - 3 Newton rings at 633 nm Radius
 - +/- 0.0125 mm thickness
@@ -63,24 +70,24 @@ However, with tolerancing, the performance of the design without desensitization
 ### 1. Design without desensitization
 
 #### Merit function
-![[desensitization-and-tolerancing-6.png]]
-![[desensitization-and-tolerancing-5.png]]
+![desensitization-and-tolerancing-6.png](../images/desensitization-and-tolerancing-6.png)
+![desensitization-and-tolerancing-5.png](../images/desensitization-and-tolerancing-5.png)
 
 #### Nominal performance
-![[desensitization-and-tolerancing-10.png]]
+![desensitization-and-tolerancing-10.png](../images/desensitization-and-tolerancing-10.png)
 
 #### Tolerancing
-![[desensitization-and-tolerancing-9.png]]
+![desensitization-and-tolerancing-9.png](../images/desensitization-and-tolerancing-9.png)
 
 ### 2. Design with desensitization
 #### Merit function
-![[desensitization-and-tolerancing-3.png]]
-![[desensitization-and-tolerancing-4.png]]
+![desensitization-and-tolerancing-3.png](../images/desensitization-and-tolerancing-3.png)
+![desensitization-and-tolerancing-4.png](../images/desensitization-and-tolerancing-4.png)
 #### Nominal performance
-![[desensitization-and-tolerancing-11.png]]
+![desensitization-and-tolerancing-11.png](../images/desensitization-and-tolerancing-11.png)
 
 #### Tolerancing
-![[desensitization-and-tolerancing-8.png]]
+![desensitization-and-tolerancing-8.png](../images/desensitization-and-tolerancing-8.png)
 
 
 ## Reference
