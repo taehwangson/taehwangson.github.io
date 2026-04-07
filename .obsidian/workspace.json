@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/lens-design/microscope-and-relay.md",
+                "file": "docs/optical-sytem-integration-research/automated-microscope.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "microscope-and-relay"
+              "title": "automated-microscope"
             }
           },
           {
@@ -200,6 +200,7 @@
   "active": "4f21b919c6bf4132",
   "lastOpenFiles": [
     "critical-dimension.md",
+    "docs/lens-design/microscope-and-relay.md",
     "docs/lens-design/index.md",
     "docs/advanced-lens-design/images/desensitization-and-tolerancing.png",
     "docs/advanced-lens-design/images/desensitization-and-tolerancing-2.png",
@@ -212,7 +213,6 @@
     "CODE_OF_CONDUCT.md",
     "index.md",
     "docs/lens-design/photographic-lens.md",
-    "docs/lens-design/microscope-and-relay.md",
     "desensitization",
     "docs/lens-design/desensitization-and-tolerancing",
     "docs/advanced-lens-design/images/desensitization-and-tolerancing-11.png",

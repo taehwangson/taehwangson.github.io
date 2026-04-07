@@ -38,7 +38,7 @@ To make the system user-friendly and fully automated, I developed a custom Pytho
 
 - **System Control:** The software provided a "Live Mode," automated LED selection, and motorized Z-stage control for precise focusing.
 - **Automated Data Analysis:** I implemented an image processing pipeline using Otsu thresholding to identify and label single cells, allowing for the automated extraction of fluorescence intensities across different channels.
-  ![](media11.gif)
+  ![](../images/media11.gif)
 
 **4. Results and Performance Validation**
 
