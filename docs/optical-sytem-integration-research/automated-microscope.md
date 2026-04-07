@@ -9,7 +9,7 @@ parent: Optical System Integration and Research
 
 # Automated Multi-Channel Fluorescence Microscope
 
-This project focused on the complete lifecycle of developing a high-performance, automated benchtop imaging system tailored for labeled cells captured on PDMS chips. The development journey progressed from rigorous optical simulation to hardware prototyping and full software integration. This research was published in [Small]([[https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202507120]]) in 2025. 
+This project focused on the complete lifecycle of developing a high-performance, automated benchtop imaging system tailored for labeled cells captured on PDMS chips. The development journey progressed from rigorous optical simulation to hardware prototyping and full software integration. This research was published in [Small](https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202507120) in 2025. 
 
 **1. Optical Design & Zemax Optimization**
 
