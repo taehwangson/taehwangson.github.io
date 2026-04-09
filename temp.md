@@ -1,13 +1,8 @@
 ---
 published: false
 ---
+
 # 1. Project title
-
-Something like:
-
-**Sensitivity of Imaging Performance and CD Measurement to Objective–Tube Lens–Camera Misalignment in an Inspection Optical System**
-
-or shorter:
 
 **Misalignment Sensitivity and CD Error in an Inspection Imaging System**
 
