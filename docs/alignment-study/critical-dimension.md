@@ -1,9 +1,9 @@
 ---
-title: Primary and Chromatic Aberration Control
+title: System setup 
 layout: default
 comments: true
-nav_order: 4
-parent: Lens Design Portfolio
+nav_order: 1
+parent: Alignment Study
 ---
 
 ## System setup 

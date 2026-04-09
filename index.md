@@ -43,4 +43,4 @@ This site is a mix of:
 
 - Email:  taehwangson1225 at gmail dot com
 - [Google Scholar](https://scholar.google.com/citations?user=diRPhFIAAAAJ&hl=en)
-- [LinkedIn]([linkedin.com/in/taehwang-son-452724b5](https://www.linkedin.com/in/taehwang-son-452724b5/))
+- [LinkedIn](https://www.linkedin.com/in/taehwang-son-452724b5/)

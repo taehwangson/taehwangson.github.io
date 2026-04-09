@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/lens-design/index.md",
+                "file": "docs/alignment-study/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -200,8 +200,9 @@
   },
   "active": "c66b0af6a32522c9",
   "lastOpenFiles": [
-    "docs/alignment-study/index.md",
     "docs/alignment-study/critical-dimension.md",
+    "docs/lens-design/index.md",
+    "docs/alignment-study/index.md",
     "docs/alignment-study/images/critical-dimension.png",
     "temp.md",
     "index.md",
@@ -221,7 +222,6 @@
     "docs/alignment-study",
     "docs/optical-sytem-integration-research/automated-microscope.md",
     "docs/lens-design/microscope-and-relay.md",
-    "docs/lens-design/index.md",
     "docs/advanced-lens-design/desensitization-and-tolerancing.md",
     "docs/advanced-lens-design/images",
     "docs/advanced-lens-design",
