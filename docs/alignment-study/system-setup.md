@@ -14,7 +14,7 @@ parent: Alignment Study
 - The field of view is limited to ±2 mm to ensure near-diffraction-limited performance under nominal (aligned) conditions. 
 
 Wavefront error across the field
-![critical-dimension-11.png](../images/critical-dimension-11.png)
+![critical-dimension-13.png](../images/critical-dimension-13.png)
  
 - Monochromatic illumination at 532 nm is used.
 
