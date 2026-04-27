@@ -52,7 +52,7 @@ iPhone camera’s ISP changes AWB depending on scene and screen touch point
 
 Galaxy A8 star
 
-![](13-1._GalaxyA8_20251215_165452.jpg)
+![image.png](../images/13-1._GalaxyA8_20251215_165452.jpg)
 
 ![image.png](../images/image-51.png)
 
