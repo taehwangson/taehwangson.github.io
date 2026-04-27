@@ -42,11 +42,11 @@ Gray world hypothesis weight $w_{gwh}$ =0
 
 IPhone 16
 
-![](IMG_1499.jpg)
+![image.png](../images/IMG_1499.jpg)
 
 ![image.png](../images/image-50.png)
 
-![](ezgif-36f2f76e5e27a4ba.gif)
+![image.png](../images/ezgif-36f2f76e5e27a4ba.gif)
 
 iPhone camera’s ISP changes AWB depending on scene and screen touch point 
 
